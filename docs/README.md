@@ -1,3 +1,3 @@
 # Headline
 
-> An awesome project.
+> Swagger generator based in jsdoc
