@@ -26,5 +26,8 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "docsify-darklight-theme": "^3.0.6"
   }
 }
