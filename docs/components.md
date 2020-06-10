@@ -14,7 +14,7 @@ Where:
 - **typedef** is the name of the scheme and is **required**.
 - The keyword `@property` is used to define the properties.
 - Type is defined between `{}` followed by the name of the property.
-- The following options, separated between `-`, are the description and format (optional).
+- The following options, separated between ` - `, are the description and format (optional).
 
 
 ```
