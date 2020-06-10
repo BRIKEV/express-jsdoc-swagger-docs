@@ -1,7 +1,9 @@
 - Getting started
 
   - [Introduction](README.md)
-  - [Configuration](configuration.md)
+  - [Configuration](configuration.md?id=configuration)
+    - [Options](configuration.md?id=configuration)
+    - [Example](configuration.md?id=full-example)
   - [Responses](responses.md)
   - [Components](components.md)
   - [Parameters](parameters.md)
