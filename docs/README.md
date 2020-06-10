@@ -122,8 +122,6 @@ app.get('/api/v1/album', (req, res) => (
 ));
 ```
 
-You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples), or visit our [documentation]() (WIP)
-
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -139,5 +137,3 @@ You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagge
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
