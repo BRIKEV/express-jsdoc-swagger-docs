@@ -13,7 +13,8 @@ To define `components` [schema](https://swagger.io/docs/specification/components
 Where:
 - **typedef** is the name of the scheme and is **required**.
 - The keyword `@property` is used to define the properties.
-- Type is defined between `{}` followed by the name of the property.
+- [Type](https://swagger.io/specification/#data-types) is defined between `{}` followed by the name of the property.
+- You can specify if the name is required with `.required`.
 - The following options, separated between ` - `, are the description and format (optional).
 
 
