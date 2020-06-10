@@ -2,11 +2,11 @@
 
 To start using the package you need to add a configuration object. This object has the following options:
 
-- [info](http://localhost:3000/#/configuration?id=info)
-- [servers](http://localhost:3000/#/configuration?id=servers)
-- [security](http://localhost:3000/#/configuration?id=security)
-- [filesPattern](http://localhost:3000/#/configuration?id=filespattern)
-- [baseDir](http://localhost:3000/#/configuration?id=basedir)
+- [info](configuration.md?id=info)
+- [servers](configuration.md?id=servers)
+- [security](configuration.md?id=security)
+- [filesPattern](configuration.md?id=filespattern)
+- [baseDir](configuration.md?id=basedir)
 
 ## Info
 
