@@ -1,7 +1,6 @@
 # Responses
 To define the [responses](https://swagger.io/docs/specification/describing-responses/) with this library:
 
-### Basic response
 ```javascript
 /**
  * GET /api/v1
