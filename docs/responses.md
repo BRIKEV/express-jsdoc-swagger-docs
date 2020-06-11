@@ -23,7 +23,7 @@ You can mark specific operations as deprecated with `@deprecated` keyword:
  * GET /api/v1/album
  * @summary This is the summary or description of the endpoint
  * @deprecated
- * @return {object} 200 - success response - application/json
+ * @return {object} 200 - success response
  * @return {object} 400 - Bad request response
  */
 app.get('/api/v1/album', (req, res) => (
@@ -43,7 +43,7 @@ Also you can assign a list of tags to each API operation:
  * @summary This is the summary or description of the endpoint
  * @tags album
  * @security BasicAuth
- * @return {object} 200 - success response - application/json
+ * @return {object} 200 - success response
  * @return {object} 400 - Bad request response
  */
 app.get('/api/v2/album', (req, res) => (
@@ -70,7 +70,7 @@ app.get('/api/v1/albums', (req, res) => (
 ```
 In this case:
 - The endpoint returns a Song array.
-- The last option of the keyword `@return` *(application/json)* specify the response media types.
+- The last option of the keyword `@return` *(application/json)* specify the response media types. This is optional and its default value is *application/json*
 
 The result in UI swagger will be as follow:
 
