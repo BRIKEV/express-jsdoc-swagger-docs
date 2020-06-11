@@ -7,6 +7,7 @@
   - [Schemas / Components](components.md)
   - [Endpoints](responses.md)
     - [Responses](responses.md)
+    - [Request body](requestBody.md)
     - [Parameters](parameters.md)
     - [Tags](tags.md)
   - [Security](security.md)
