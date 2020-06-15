@@ -1,3 +1,4 @@
+![npm](https://img.shields.io/npm/v/express-jsdoc-swagger)
 ![Node.js Package](https://github.com/BRIKEV/express-jsdoc-swagger/workflows/Build/badge.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/BRIKEV/express-jsdoc-swagger/badge.svg)](https://snyk.io/test/github/BRIKEV/express-jsdoc-swagger)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6d5565df0c9c10e75b59/maintainability)](https://codeclimate.com/github/BRIKEV/express-jsdoc-swagger/maintainability)
@@ -13,11 +14,16 @@ This library assumes you are using:
 1. [NodeJS](https://nodejs.org)
 2. [Express.js](http://www.expressjs.com)
 
+## Installation
+```
+npm i express-jsdoc-swagger
+```
+
 ## Usage
 ```javascript
 
 const express = require('express');
-const expressJSDocSwagger = require('../..');
+const expressJSDocSwagger = require('express-jsdoc-swagger');
 
 const options = {
   info: {
@@ -33,7 +39,7 @@ const options = {
       scheme: 'basic',
     },
   },
-  file: './**/*.js', // Glob pattern to find your jsdoc files
+  filesPattern: './**/*.js', // Glob pattern to find your jsdoc files
   swaggerUIPath: '/your-url', // SwaggerUI will be render in this url. Default: '/api-docs'
   baseDir: __dirname,
 };
@@ -56,7 +62,7 @@ app.listen(PORT, () => logger.info(`Example app listening at http://localhost:${
 
 ```
 
-### Examples
+## Examples
 1. Basic configuration
 ```javascript
 const options = {
@@ -73,7 +79,7 @@ const options = {
       scheme: 'basic',
     },
   },
-  file: './**/*.js', // Glob pattern to find your jsdoc files
+  filesPattern: './**/*.js', // Glob pattern to find your jsdoc files
   baseDir: __dirname,
 };
 ```
@@ -85,7 +91,7 @@ const options = {
  * @typedef {object} Song
  * @property {string} title.required - The title
  * @property {string} artist - The artist
- * @property {number} year - The year - int64
+ * @property {number} year - The year - double
  */
 ```
 
@@ -122,6 +128,8 @@ app.get('/api/v1/album', (req, res) => (
 ));
 ```
 
+You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples), or visit our [documentation]() (WIP)
+
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -137,3 +145,5 @@ app.get('/api/v1/album', (req, res) => (
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
