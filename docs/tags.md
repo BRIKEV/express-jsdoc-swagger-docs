@@ -1,5 +1,5 @@
 # Tags
-You can assign a list of [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to each API operation
+You can assign a list of [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to each API operation.
 
 To define a tag with express-jsdoc-swagger:
 ```
@@ -23,4 +23,6 @@ Furthermore, the same tag can be assigned to several endpoints:
 In this case, the tags `Album` and `Song` have been assigned to the endpoint songs and the result is as follows:
 
 <img src="./assets/tags.png"/>
+
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/tags).
 

@@ -1,7 +1,7 @@
 {
   "name": "express-jsdoc-swagger-docs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Swagger OpenAPI 3.x generator",
   "main": "index.js",
   "scripts": {
     "start": "docsify serve ./docs"
