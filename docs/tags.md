@@ -1,5 +1,5 @@
 # Tags
-You can assign a list of [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to each API operation
+You can assign a list of [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to each API operation.
 
 To define a tag with express-jsdoc-swagger:
 ```
