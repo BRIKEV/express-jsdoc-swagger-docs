@@ -11,8 +11,8 @@ To add [responses](https://swagger.io/docs/specification/describing-responses/) 
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 ```
 Where:
-- `@summary` is the endpoint description
-- `@return` is used to define the response
+- `@summary` is the endpoint description.
+- `@return` is used to define the response.
 - [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
 - After the type, you have to define the HTTP status code.
 - The following option, separated between ` - `, is the description.
@@ -70,7 +70,7 @@ app.get('/api/v1/albums', (req, res) => (
 ```
 In this case:
 - The endpoint returns a Song array.
-- The last option of the keyword `@return` *(application/json)* specify the response media types. This is optional and its default value is *application/json*
+- The last option of the keyword `@return` *(application/json)* specify the response media types. This is optional and its default value is *application/json*.
 
 The result in UI swagger will be as follow:
 
