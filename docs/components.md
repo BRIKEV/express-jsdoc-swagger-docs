@@ -39,3 +39,5 @@ The schemas previously defined (*Song and Author*) can also be used as propertie
 
 #### The result in UI swagger will be as follow:
 <img src="./assets/components.png"/>
+
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/components).

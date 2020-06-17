@@ -24,3 +24,5 @@ In this case, the tags `Album` and `Song` have been assigned to the endpoint son
 
 <img src="./assets/tags.png"/>
 
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/tags).
+

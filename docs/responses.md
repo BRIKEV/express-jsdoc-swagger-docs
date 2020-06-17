@@ -78,3 +78,4 @@ The result in UI swagger will be as follow:
 
 > To learn how define components schemas, please visit [components](components.md) section.
 
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/responses).
