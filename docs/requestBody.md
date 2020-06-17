@@ -64,6 +64,10 @@ app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 
 In that example we use the last option of the keyword `@param` to specify the request media type as multipart/form-data.
 
+This example will look like this in the Swagger UI:
+
+<img src="./assets/request-body.png"/>
+
 > To learn how define components schemas, please visit [components](components.md) section.
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/requestBody).
