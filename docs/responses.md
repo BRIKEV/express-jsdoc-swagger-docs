@@ -1,5 +1,5 @@
 # Responses
-To add [responses](https://swagger.io/docs/specification/describing-responses/) for your endpoints with express-jsdoc-swagger, you could add this comments:
+To add [responses](https://swagger.io/docs/specification/describing-responses/) to your endpoints with express-jsdoc-swagger, you could add this comments:
 
 ```javascript
 /**
@@ -10,6 +10,7 @@ To add [responses](https://swagger.io/docs/specification/describing-responses/) 
  */
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 ```
+
 Where:
 - `@summary` is the endpoint description.
 - `@return` is used to define the response.
@@ -72,7 +73,7 @@ In this case:
 - The endpoint returns a Song array.
 - The last option of the keyword `@return` *(application/json)* specify the response media types. This is optional and its default value is *application/json*.
 
-The result in UI swagger will be as follow:
+The result in swagger UI will be this:
 
 <img src="./assets/response-component.png"/>
 

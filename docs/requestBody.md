@@ -1,5 +1,5 @@
 # Request body
-To add a [body payload](https://swagger.io/docs/specification/describing-request-body/) for your endpoints with express-jsdoc-swagger, you could add this comments:
+To add a [body payload](https://swagger.io/docs/specification/describing-request-body/) to your endpoints with express-jsdoc-swagger, you could add this comments:
 
 ```javascript
 /**
@@ -64,7 +64,7 @@ app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 
 In that example we use the last option of the keyword `@param` to specify the request media type as multipart/form-data.
 
-This example will look like this in the Swagger UI:
+The result in swagger UI will be this:
 
 <img src="./assets/request-body.png"/>
 
