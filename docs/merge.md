@@ -1,6 +1,6 @@
-# Merge
+# Extend your swagger file
 
-This option is useful if you have an old project and only want to comment on new endpoints being developed.
+This option is useful if you have an old project and only want to add comments on new endpoints.
 ## collapsible markdown?
 
 ### Example
@@ -211,16 +211,11 @@ You may have previously defined the following:
 
 <img src="./assets/merge.png"/>
 
-If you don't want to lose/migrate that json, you have the next option:
-
-> If you want to know more about *express-jsdoc-swagger* configuration, please visit [configuration](configuration.md) section.
-
-Now, the above json can be included in a file called swagger.js, to be imported later.
-
 ## Full integration example
+If you don't want to *lose/migrate* that JSON, you have the next option:
 ```javascript
 const express = require('express');
-const oldSwagger = require('./swagger');
+const oldSwagger = require('./swagger'); // This file contains the previously mentioned JSON
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
 const options = {
@@ -235,7 +230,7 @@ const options = {
 const app = express();
 const port = 3001;
 
-// To merge the json we had with the new endpoints, It will be passed as a second parameter:
+// To merge the JSON we had with the new endpoints, It will be passed as a second parameter:
 expressJSDocSwagger(app)(options, oldSwagger);
 
 // Example of new endpoint:
