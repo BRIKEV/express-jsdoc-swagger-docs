@@ -14,6 +14,6 @@
 
 - Advanced usage
 
-  - [Combine schemas](combineSchemas.md)
   - [Extend your swagger file](merge.md)
   - [Event emitter](eventEmitter.md)
+  - [Combine schemas](combineSchemas.md)
