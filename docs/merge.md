@@ -1,10 +1,9 @@
 # Extend your swagger file
 
-This option is useful if you have an old project and only want to add comments on new endpoints.
-## collapsible markdown?
+This option is useful if you have an old project and you only want to add comments on new endpoints, or you want to add new features that we don't support.
 
-### Example
-You may have previously defined the following:
+## Example
+You could have one `swagger.json` already defined like this one:
 <details><summary>Click to expand</summary>
 
 ```js
@@ -207,19 +206,19 @@ You may have previously defined the following:
 ```
 </details>
 
-### Which gives us the next output:
+Which renders the next SwaggerUI:
 
 <img src="./assets/merge.png"/>
 
-## Full integration example
-If you don't want to *lose/migrate* that JSON, you have the next option:
+If you want to *integrate* your API written with `jsdoc` comments and your `swagger.json`, you can check out this example:
+
 ```javascript
 const express = require('express');
-const oldSwagger = require('./swagger'); // This file contains the previously mentioned JSON
+const oldSwagger = require('./swagger.json'); // This file contains the previously mentioned swagger.json
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
 const options = {
-  info: { // Where version and title are required
+  info: { // version and title are required
     version: '1.0.0',
     title: 'Albums store',
   },
@@ -230,7 +229,7 @@ const options = {
 const app = express();
 const port = 3001;
 
-// To merge the JSON we had with the new endpoints, It will be passed as a second parameter:
+// To merge swagger.json we had with the new endpoints, It will be passed as a second parameter:
 expressJSDocSwagger(app)(options, oldSwagger);
 
 // Example of new endpoint:
@@ -251,6 +250,6 @@ app.listen(port, () => logger.info(`Example app listening at http://localhost:${
 
 ```
 
-Finally, the outcome is:
+Finally, the result in the SwaggerUI will be the following:
 
 <img src="./assets/merge-result.png"/>
