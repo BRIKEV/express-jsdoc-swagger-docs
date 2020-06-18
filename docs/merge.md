@@ -246,10 +246,12 @@ app.get('/api/v1/albums', (req, res) => (
   }])
 ));
 
-app.listen(port, () => logger.info(`Example app listening at http://localhost:${port}`));
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 ```
 
 Finally, the result in the SwaggerUI will be the following:
 
 <img src="./assets/merge-result.png"/>
+
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/merge).
