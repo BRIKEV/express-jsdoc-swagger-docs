@@ -1,7 +1,7 @@
 # Components
 To define `components` [schema](https://swagger.io/docs/specification/components/):
 
-```
+```javascript
 /**
  * A song
  * @typedef {object} Song
@@ -18,7 +18,7 @@ Where:
 - The following options, separated between ` - `, are the description and format (optional).
 
 
-```
+```javascript
 /**
  * Author model
  * @typedef {object} Author
@@ -28,7 +28,7 @@ Where:
 ```
 
 The schemas previously defined (*Song and Author*) can also be used as properties of another scheme:
-```
+```javascript
 /**
  * Album
  * @typedef {object} Album

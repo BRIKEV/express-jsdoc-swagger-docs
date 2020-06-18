@@ -14,7 +14,7 @@ The info options is the same as swagger specifies in [their documentation](https
 
 #### Info option example
 
-```js
+```javascript
 {
   "title": "Sample Pet Store App",
   "description": "This is a sample server for a pet store.",
@@ -38,7 +38,7 @@ The servers options is the same as swagger specifies in [their documentation](ht
 
 #### Server option example
 
-```js
+```javascript
 {
   "servers": [
     {
@@ -63,7 +63,7 @@ The security options is the same as swagger specifies in [their documentation](h
 
 #### Security option example
 
-```js
+```javascript
 {
   "security": {
     "BasicAuth": {
@@ -84,13 +84,13 @@ This required option you could add a path to one file or a [glob pattern](https:
 
 #### filesPAttern option example
 
-```js
+```javascript
 {
   "filesPattern": "./basic-auth.js"
 }
 ```
 
-```js
+```javascript
 {
   "filesPattern": "./**/*-routes.js"
 }
@@ -102,7 +102,7 @@ App absolute path.
 
 #### baseDir option example
 
-```js
+```javascript
 {
   "baseDir": __dirname
 }
@@ -110,7 +110,7 @@ App absolute path.
 
 ## Full example
 
-```js
+```javascript
 const express = require('express');
 
 const expressJSDocSwagger = require('express-jsdoc-swagger');

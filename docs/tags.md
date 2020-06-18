@@ -2,7 +2,7 @@
 You can assign a list of [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to each API operation.
 
 To define a tag with express-jsdoc-swagger:
-```
+```javascript
 /**
  * GET /api/v1/album
  * @tags Album - everything about album
@@ -13,7 +13,7 @@ Where:
 - The following option, separated between ` - `, is the description.
 
 Furthermore, the same tag can be assigned to several endpoints:
-```
+```javascript
 /**
  * GET /api/v1/songs
  * @tags Album
