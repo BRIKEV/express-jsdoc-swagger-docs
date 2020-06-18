@@ -113,7 +113,7 @@ App absolute path.
 ```js
 const express = require('express');
 
-const expressJSDocSwagger = require('../..');
+const expressJSDocSwagger = require('express-jsdoc-swagger');
 
 // This is a full set of options
 // It is not neccesary to complete every option
