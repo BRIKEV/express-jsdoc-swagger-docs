@@ -34,6 +34,8 @@ It's **important** that the criteria must be the first value and be followed by 
 
 We currently support, `oneOf`, `anyOf` and `allOf`.
 
+> You can extend our support to Open API full support by adding extending your own swagger.json, please visit [Extend your swagger file section](merge.md) to more info.
+
 > To learn how define components schemas, please visit [components / schemas](components.md) section.
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/combineSchemas/index.js).
