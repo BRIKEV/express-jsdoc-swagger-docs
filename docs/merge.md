@@ -1,6 +1,6 @@
 # Extend your swagger file
 
-This option is useful if you have an old project and you only want to add comments on new endpoints, or you want to add new features that we don't support.
+This option is useful if you have an old project, and you only want to add comments on new endpoints, or you want to add new features that we don't support.
 
 ## Example
 You could have one `swagger.json` already defined like this one:

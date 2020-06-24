@@ -1,5 +1,5 @@
 # Responses
-To add [responses](https://swagger.io/docs/specification/describing-responses/) to your endpoints with express-jsdoc-swagger, you could add this comments:
+To add [responses](https://swagger.io/docs/specification/describing-responses/) to your endpoints with express-jsdoc-swagger, you could add these comments:
 
 ```javascript
 /**

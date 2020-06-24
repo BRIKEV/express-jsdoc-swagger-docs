@@ -20,7 +20,7 @@ Furthermore, the same tag can be assigned to several endpoints:
  * @tags Songs - everything about songs
  */
 ```
-In this case, the tags `Album` and `Song` have been assigned to the endpoint songs and the result is as follows:
+In this case, `Album` and `Song` tags have been assigned to the songs' endpoint, and the result in swagger UI will be this:
 
 <img src="./assets/tags.png"/>
 

@@ -34,7 +34,7 @@ The info options is the same as swagger specifies in [their documentation](https
 
 ## Servers
 
-The servers options is the same as swagger specifies in [their documentation](https://swagger.io/specification/#server-object). An array of Server Objects, which provide connectivity information to a target server.
+The servers options are the same as swagger specifies in [their documentation](https://swagger.io/specification/#server-object). An array of Server Objects, which provide connectivity information to a target server.
 
 #### Server option example
 
@@ -59,7 +59,7 @@ The servers options is the same as swagger specifies in [their documentation](ht
 
 ## Security
 
-The security options is the same as swagger specifies in [their documentation](https://swagger.io/specification/#security-requirement-object). A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used.
+The security options are the same as swagger specifies in [their documentation](https://swagger.io/specification/#security-requirement-object). A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used.
 
 #### Security option example
 
