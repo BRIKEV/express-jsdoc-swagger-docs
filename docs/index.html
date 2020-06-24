@@ -12,6 +12,7 @@
     title="docsify-darklight-theme"
     type="text/css"
   />
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 </head>
 <body>
   <div id="app"></div>
@@ -22,6 +23,13 @@
       coverpage: false,
       loadSidebar: true,
       ga: 'UA-170034126-1',
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/BRIKEV/express-jsdoc-swagger-docs/edit/master/docs/',
+          null,
+          'Improve this Doc',
+        ),
+      ],
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
