@@ -1,5 +1,5 @@
 # Request body
-To add a [body payload](https://swagger.io/docs/specification/describing-request-body/) to your endpoints with express-jsdoc-swagger, you could add this comments:
+To add a [body payload](https://swagger.io/docs/specification/describing-request-body/) to your endpoints with express-jsdoc-swagger, you could add these comments:
 
 ```javascript
 /**

@@ -1,5 +1,5 @@
 # Parameters
-To add [parameters](https://swagger.io/docs/specification/describing-parameters/) to your endpoints with express-jsdoc-swagger, you could add this comments:
+To add [parameters](https://swagger.io/docs/specification/describing-parameters/) to your endpoints with express-jsdoc-swagger, you could add these comments:
 
 ```javascript
 /**
