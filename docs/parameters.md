@@ -15,7 +15,7 @@ app.get('/api/v1/:id', (req, res) => res.send('Hello World!'));
 Where:
 - `@param` is used to define one parameter.
 - [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define they key you want for the parameter.
+- After the type, you have to define the key you want for the parameter.
 - You can define the status of your param like this:
   - `* @param {string} name.query.required` name will be a required query param.
   - `* @param {string} name.query.deprecated` name will be a deprecated query param.
@@ -34,7 +34,7 @@ You can add **enum values** to your parameters like this:
  */
 ```
 
-Last parameter can be used as enum or you can switch between enum and description.
+The last parameter can be used as an enum, or you can switch between enum and description.
 
 The result in swagger UI will be this:
 

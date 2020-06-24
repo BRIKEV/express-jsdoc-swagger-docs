@@ -12,7 +12,7 @@ app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 Where:
 - `@param` is used to define one parameter.
 - [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define they key **request.body**. This key must have that value if you want this as a body payload.
+- After the type, you have to define the key **request.body**. This key must have that value if you want this as a body payload.
 - The following option, separated between ` - `, is the description.
 - The last option of the keyword `@param` *(application/json)* specify the request media type. This is optional and its default value is *application/json*.
 
@@ -62,7 +62,7 @@ Or you can add form-data requests to upload files:
 app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 ```
 
-In that example we use the last option of the keyword `@param` to specify the request media type as multipart/form-data.
+In that example, we use the last option of the keyword `@param` to specify the request media type as multipart/form-data.
 
 The result in swagger UI will be this:
 

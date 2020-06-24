@@ -34,4 +34,6 @@ It's **important** that the criteria must be the first value and be followed by 
 
 We currently support, `oneOf`, `anyOf` and `allOf`.
 
+> To learn how define components schemas, please visit [components / schemas](components.md) section.
+
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/combineSchemas/index.js).
