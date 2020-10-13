@@ -1,3 +1,4 @@
-* Translations
-  * [English](/)
-  * [Chinese](/zh/)
+* Idiomas
+  * [Inglés](/)
+  * [Español](/es)
+  * [Chino](/zh/)
