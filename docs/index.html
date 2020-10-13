@@ -18,6 +18,7 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      loadNavbar: true,
       name: 'express-jsdoc-swagger',
       repo: 'https://github.com/BRIKEV/express-jsdoc-swagger',
       coverpage: false,
@@ -30,6 +31,10 @@
           'Improve this Doc',
         ),
       ],
+      alias: {
+        "/es/(.*)": "https://raw.githubusercontent.com/BRIKEV/express-jsdoc-swagger-docs/master/docs/es/$1",
+        "/zh/(.*)": "https://raw.githubusercontent.com/BRIKEV/express-jsdoc-swagger-docs/master/docs/zh/$1",
+      },
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
