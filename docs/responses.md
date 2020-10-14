@@ -77,6 +77,8 @@ The result in swagger UI will be this:
 
 <img src="./assets/response-component.png"/>
 
+> To learn how to add examples of your endpoint's output, check out the [examples](examples.md) section.
+
 > To learn how define components schemas, please visit [components](components.md) section.
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/responses).
