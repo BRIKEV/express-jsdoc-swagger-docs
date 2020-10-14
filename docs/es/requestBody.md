@@ -68,6 +68,8 @@ The result in swagger UI will be this:
 
 <img src="./assets/request-body.png"/>
 
+> To learn how to add examples of your endpoint's payload, check out the [examples](examples.md) section.
+
 > To learn how define components schemas, please visit [components](components.md) section.
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/requestBody).
