@@ -9,6 +9,7 @@
     - [Responses](responses.md)
     - [Request body](requestBody.md)
     - [Parameters](parameters.md)
+    - [Examples](examples.md)
     - [Tags](tags.md)
   - [Security](security.md)
 
