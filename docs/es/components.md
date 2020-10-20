@@ -12,7 +12,7 @@ Para definir los `componentes` [schema](https://swagger.io/docs/specification/co
 ```
 Donde:
 - **typedef** es el nombre del esquema y es **requerido**.
-- La key "property" se utiliza para definir las propiedades.
+- La key `property` se utiliza para definir las propiedades.
 - El [tipo](https://swagger.io/specification/#data-types) se define entre `{}` seguido del nombre de la propiedad.
 - Se puede especificar si el nombre es requerido con `.required`.
 - Las siguientes opciones, separadas entre ` - `, son la descripción y el formato (opcional).

@@ -47,4 +47,4 @@ El swagger resultante será:
 
 <img src="./assets/security.png"/>
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/security/basic-auth.js).
+> Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/security/basic-auth.js).
