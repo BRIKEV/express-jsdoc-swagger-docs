@@ -35,7 +35,7 @@ app.get('/api/v1/album', (req, res) => (
 ```
 Y el resultado será el siguiente:
 
-<img src="../assets/deprecated.png"/>
+<img src="./assets/deprecated.png"/>
 
 También se puede asignar una serie de `tags` a cada endpoint:
 ```javascript
@@ -75,7 +75,7 @@ En este caso:
 
 El swagger resultante será:
 
-<img src="../assets/response-component.png"/>
+<img src="./assets/response-component.png"/>
 
 > Para aprender a añadir ejemplos de la salida de tu endpoint, mira la sección [examples](examples.md).
 

@@ -66,7 +66,7 @@ In that example, we use the last option of the keyword `@param` to specify the r
 
 The result in swagger UI will be this:
 
-<img src="../assets/request-body.png"/>
+<img src="./assets/request-body.png"/>
 
 > To learn how to add examples of your endpoint's payload, check out the [examples](examples.md) section.
 

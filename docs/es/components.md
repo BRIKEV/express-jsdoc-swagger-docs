@@ -27,7 +27,7 @@ Donde:
  */
 ```
 
-Los esquemas anteriores (*Song and Author*) también pueden ser utilizados como propiedades de otro esquema:
+Los esquemas anteriores (*Song y Author*) también pueden ser utilizados como propiedades de otro esquema:
 ```javascript
 /**
  * Album
@@ -38,6 +38,6 @@ Los esquemas anteriores (*Song and Author*) también pueden ser utilizados como 
 ```
 
 #### El resultado en la UI de swagger será:
-<img src="../assets/components.png"/>
+<img src="./assets/components.png"/>
 
 > Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/components).

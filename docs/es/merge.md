@@ -208,7 +208,7 @@ Podrías tener un `swagger.json` ya definido como este:
 
 El cual genera el siguiente swagger:
 
-<img src="../assets/merge.png"/>
+<img src="./assets/merge.png"/>
 
 Para *integrar* tu API escrita con comentarios `jsdoc` y tu `swagger.json`, puedes ver el siguiente ejemplo:
 
@@ -252,6 +252,6 @@ app.listen(port, () => console.log(`Example app listening at http://localhost:${
 
 El swagger resultante será el siguiente:
 
-<img src="../assets/merge-result.png"/>
+<img src="./assets/merge-result.png"/>
 
 > Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/merge).

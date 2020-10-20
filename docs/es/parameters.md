@@ -38,6 +38,6 @@ El último parámetro puede ser usado como un enum, o se puede cambiar de orden 
 
 El resultado en la interfaz de usuario será este:
 
-<img src="../assets/parameters.png"/>
+<img src="./assets/parameters.png"/>
 
 > Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/parameters).

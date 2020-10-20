@@ -38,7 +38,7 @@ app.post('/api/v1/song', (req, res) => res.send({
 
 The result in Swagger UI will look like this:
 
-<img src="../assets/examples.png"/>
+<img src="./assets/examples.png"/>
 
 > You can find more working examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/withExamples.js) or [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/responses/withExamples.js).
 

@@ -66,7 +66,7 @@ En ese ejemplo, usamos la última opción de la palabra reservada `@param` para 
 
 El resultado en SwaggerUI sería algo así:
 
-<img src="../assets/request-body.png"/>
+<img src="./assets/request-body.png"/>
 
 > Para aprender como añadir ejemplos al body de tus endpoint, puedes revisar la sección de [ejemplos](examples.md).
 
