@@ -1,5 +1,5 @@
-# Components
-To define `components` [schema](https://swagger.io/docs/specification/components/):
+# Componentes
+Para definir los `componentes` [schema](https://swagger.io/docs/specification/components/):
 
 ```javascript
 /**
@@ -10,12 +10,12 @@ To define `components` [schema](https://swagger.io/docs/specification/components
  * @property {number} year - The year - double
  */
 ```
-Where:
-- **typedef** is the name of the scheme and is **required**.
-- The keyword `@property` is used to define the properties.
-- [Type](https://swagger.io/specification/#data-types) is defined between `{}` followed by the name of the property.
-- You can specify if the name is required with `.required`.
-- The following options, separated between ` - `, are the description and format (optional).
+Dónde:
+- **typedef** es el nombre del esquema y es **requerido**.
+- La key "property" se utiliza para definir las propiedades.
+- El [tipo](https://swagger.io/specification/#data-types) se define entre `{}` seguido del nombre de la propiedad.
+- Se puede especificar si el nombre es requerido con `.required`.
+- Las siguientes opciones, separadas entre ` - `, son la descripción y el formato (opcional).
 
 
 ```javascript
@@ -27,7 +27,7 @@ Where:
  */
 ```
 
-The schemas previously defined (*Song and Author*) can also be used as properties of another scheme:
+Los esquemas anteriores (*Song and Author*) también pueden ser utilizados como propiedades de otro esquema:
 ```javascript
 /**
  * Album
@@ -37,7 +37,7 @@ The schemas previously defined (*Song and Author*) can also be used as propertie
  */
 ```
 
-#### The result in UI swagger will be as follow:
-<img src="./assets/components.png"/>
+#### El resultado en la UI de swagger será:
+<img src="../assets/components.png"/>
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/components).
