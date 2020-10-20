@@ -1,17 +1,17 @@
 - Getting started
 
-  - [Introduction](README.md)
-  - [Configuration](configuration.md?id=configuration)
-    - [Options](configuration.md?id=configuration)
-    - [Example](configuration.md?id=full-example)
-  - [Schemas / Components](components.md)
-  - [Endpoints](responses.md)
-    - [Responses](responses.md)
-    - [Request body](requestBody.md)
-    - [Parameters](parameters.md)
-    - [Examples](examples.md)
-    - [Tags](tags.md)
-  - [Security](security.md)
+  - [Introduction](/zh/README.md)
+  - [Configuration](/zh/configuration.md?id=configuration)
+    - [Options](/zh/configuration.md?id=configuration)
+    - [Example](/zh/configuration.md?id=full-example)
+  - [Schemas / Components](/zh/components.md)
+  - [Endpoints](/zh/responses.md)
+    - [Responses](/zh/responses.md)
+    - [Request body](/zh/requestBody.md)
+    - [Parameters](/zh/parameters.md)
+    - [Examples](/zh/examples.md)
+    - [Tags](/zh/tags.md)
+  - [Security](/zh/security.md)
 
 - Advanced usage
 
