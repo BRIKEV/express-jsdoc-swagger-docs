@@ -62,6 +62,8 @@ The sections below describe in more in detail the expected syntax for the `@exam
 | Summary | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and *NOT* the summary. |
 | Content | Example content for the request body. It's imperative that its contents start at a new line below the `@example` tag, and not in the same one. The content can be split into multiple lines if necessary, for better readibility. Indentation and breaklines will be preserved in Swagger UI. |
 
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/withExamples.js).
+
 ### Response body example
 
 ```
@@ -75,3 +77,4 @@ The sections below describe in more in detail the expected syntax for the `@exam
 | Summary | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and *NOT* the summary. |
 | Content | Example content for the response body. It's imperative that its contents start at a new line below the `@example` tag, and not in the same one. The content can be split into multiple lines if necessary, for better readibility. Indentation and breaklines will be preserved in Swagger UI. |
 
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/responses/withExamples.js).
