@@ -252,6 +252,6 @@ app.listen(port, () => console.log(`Example app listening at http://localhost:${
 
 El swagger resultante será el siguiente:
 
-<img src="./assets/merge-result.png"/>
+<img src="../assets/merge-result.png"/>
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/merge).
+> Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/merge).
