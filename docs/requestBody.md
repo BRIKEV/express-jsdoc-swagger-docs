@@ -73,3 +73,28 @@ The result in swagger UI will be this:
 > To learn how define components schemas, please visit [components](components.md) section.
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/requestBody).
+
+### Body as form parameter
+
+You can send some body parameters without using a component. To do that you could add these comments:
+
+```javascript
+/**
+ * POST /api/v1/song
+ * @param {string} id.form.required - This is the song id - application/x-www-form-urlencoded
+ * @param {string} title.form.required - This is the song title - application/x-www-form-urlencoded
+ * @return {object} 200 - song response
+ */
+app.post('/api/v1/songs', (req, res) => res.json({}));
+```
+
+Where:
+- `@param` is used to define one parameter.
+- [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
+- After the type, you have to define the key you want for the parameter followed by **form** value.
+- The following option, separated between ` - `, is the description.
+- The last option of the keyword `@param` *(application/json)* specify the request media type. This is optional and its default value is *application/json*.
+
+**IMPORTANT:** To use form params it is neccesary to provide a description for each field
+
+> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/formParameters.js).
