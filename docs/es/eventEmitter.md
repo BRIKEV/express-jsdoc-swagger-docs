@@ -1,12 +1,12 @@
-# Event emitter
+# Emisor de eventos
 
-We expose an [event emitter](https://nodejs.org/api/events.html) in case you want to know more about what is happening while we parse the comments or the Swagger object result.
+Se expone un [event emitter](https://nodejs.org/api/events.html) por si se quisiera saber más sobre lo que está pasando mientras se parsean los comentarios o el resultado de nuestro swagger.
 
-These are the events we expose:
+Estos son los eventos que se exponen:
 
-- **error** you can subscribe to this event to debug if there is a problem while the parsing process is running.
-- **process** you can subscribe to this event to debug how jsdoc comments are being parsed into swagger object per entity.
-- **finish** you can subscribe to receive the result of the swagger object generated.
+- **error** puedes suscribirte a este evento para depurar si hay un problema mientras se ejecuta el proceso de análisis.
+- **proceso** puedes suscribirte a este evento para depurar cómo se analizan los comentarios de jsdoc en el objeto de swagger por entidad.
+- **finalizar** puedes suscribirte para recibir el resultado del objeto de arrogancia generado.
 
 ## Example
 
@@ -51,5 +51,5 @@ listener.on('finish', swaggerObject => {
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 ````
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/eventEmitter).
+> Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/eventEmitter).
 
