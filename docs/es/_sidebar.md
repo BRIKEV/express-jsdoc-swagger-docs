@@ -15,6 +15,6 @@
 
 - Conceptos avanzados
 
-  - [ Extender tu archivo de swagger](merge.md)
-  - [Emisor de eventos](eventEmitter.md)
-  - [Combinar esquemas](combineSchemas.md)
+  - [ Extender tu archivo de swagger](/es/merge.md)
+  - [Emisor de eventos](/es/eventEmitter.md)
+  - [Combinar esquemas](/es/combineSchemas.md)

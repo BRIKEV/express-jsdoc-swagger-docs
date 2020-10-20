@@ -40,4 +40,4 @@ Los esquemas anteriores (*Song and Author*) también pueden ser utilizados como 
 #### El resultado en la UI de swagger será:
 <img src="../assets/components.png"/>
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/components).
+> Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/components).

@@ -8,19 +8,19 @@
 
 # express-jsdoc-swagger
 
-With this library, you can document your express endpoints using swagger [OpenAPI 3 Specification](https://swagger.io/specification/) without writing YAML or JSON. You can write jsdoc comments on each endpoint, and the library is going to create the swagger UI.
+Con `express-jsdoc-swagger`, puedes documentar tus endpoints usando la [especificación OpenAPI 3 de swagger](https://swagger.io/specification/) sin escribir YAML o JSON. Sólo tienes que escribir comentarios en tus endpoints y la interfaz de usuario se generará automáticamente.
 
-## Prerequisites
-This library assumes you are using:
+## Prerrequisitos
+Se asume que se está usando:
 1. [NodeJS](https://nodejs.org)
 2. [Express.js](http://www.expressjs.com)
 
-## Installation
+## Instalaión
 ```
 npm i express-jsdoc-swagger
 ```
 
-## Usage
+## Uso
 ```javascript
 const express = require('express');
 const expressJSDocSwagger = require('express-jsdoc-swagger');
@@ -39,8 +39,8 @@ const options = {
       scheme: 'basic',
     },
   },
-  filesPattern: './**/*.js', // Glob pattern to find your jsdoc files
-  swaggerUIPath: '/your-url', // SwaggerUI will be render in this url. Default: '/api-docs'
+  filesPattern: './**/*.js', // Patrón global para encontrar tus archivos jsdoc
+  swaggerUIPath: '/your-url', // SwaggerUI se presentará en esta url. Por defecto: '/api-docs'
   baseDir: __dirname,
 };
 
@@ -62,8 +62,8 @@ app.listen(PORT, () => console.log(`Example app listening at http://localhost:${
 
 ```
 
-## Examples
-1. Basic configuration
+## Ejemplos
+1. Configuración básica
 ```javascript
 const options = {
   info: {
@@ -84,7 +84,7 @@ const options = {
 };
 ```
 
-2. Components definition
+2. Definición de los componentes
 ```javascript
 /**
  * A song type
@@ -95,7 +95,7 @@ const options = {
  */
 ```
 
-3. Endpoint that returns a `Songs` model array
+3. Endpoint que retorna un array de `Songs`
 ```javascript
 /**
  * GET /api/v1/albums
@@ -110,7 +110,7 @@ app.get('/api/v1/albums', (req, res) => (
 ));
 ```
 
-4. Basic endpoint definition with tags, params and basic authentication
+4. Definición básica de un endpoint con tags, parámetros y una autenticación básica
 ```javascript
 /**
  * GET /api/v1/album
@@ -128,7 +128,7 @@ app.get('/api/v1/album', (req, res) => (
 ));
 ```
 
-5. Basic endpoint definition with code example for response body
+5. Endpoint básico con ejemplo del cuerpo de una respuesta
 ```javascript
 /**
  * GET /api/v1/albums
@@ -151,7 +151,7 @@ app.get('/api/v1/albums', (req, res) => (
 ));
 ```
 
-You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples), or visit our [documentation](https://brikev.github.io/express-jsdoc-swagger-docs/#/).
+Puedes encontrar más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples).
 
 ## Contributors ✨
 
@@ -171,4 +171,4 @@ You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagge
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Este proyecto sigue la especificación de [all-contributors](https://github.com/all-contributors/all-contributors). Las contribuciones de cualquier tipo son bienvenidas!

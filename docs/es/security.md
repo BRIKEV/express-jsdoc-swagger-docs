@@ -1,5 +1,5 @@
-# Security
-To add [Authentication](https://swagger.io/docs/specification/authentication/) to your endpoints with express-jsdoc-swagger, you have to add your security schemas to the config object when you create your instance:
+# Seguridad
+Para añadir [Autenticación](https://swagger.io/docs/specification/authentication/) a tus endpoints con `express-jsdoc-swagger`, tienes que añadir la opción `security` en las opciones de configuración cuando se crea la instancia.
 
 ```javascript
 const express = require('express');
@@ -29,9 +29,9 @@ const port = 3000;
 expressJSDocSwagger(app)(options);
 ```
 
-- `Security` key is used to define your security schemas, and it is optional in case you don't want any type of security.
+- `Security` se usa para definir tus la configuración de seguridad, y es opcional por si no se quisiera ningún tipo de seguridad.
 
-After you add your security schemas, you can use them in your endpoints like this:
+Después de agregar la opción `security`, se puede usar en los endpoints de la siguiente manera:
 
 ```javascript
 /**
@@ -43,7 +43,7 @@ After you add your security schemas, you can use them in your endpoints like thi
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 ```
 
-The result in swagger UI will be this:
+El swagger resultante será:
 
 <img src="./assets/security.png"/>
 
