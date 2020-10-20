@@ -152,7 +152,7 @@ app.get('/api/v1/albums', (req, res) => (
 ));
 ```
 
-You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples), or visit our [documentation](https://brikev.github.io/express-jsdoc-swagger-docs/#/).
+You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples).
 
 ## Contributors ✨
 
