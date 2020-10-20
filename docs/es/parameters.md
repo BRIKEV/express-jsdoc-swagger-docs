@@ -12,7 +12,7 @@ Para añaidr [parameters](https://swagger.io/docs/specification/describing-param
 app.get('/api/v1/:id', (req, res) => res.send('Hello World!'));
 ````
 
-Dónde:
+Donde:
 - `@param` se utiliza para definir un parámetro.
 - El [tipo](https://swagger.io/specification/#data-types) se define entre `{}`.
 - Después del tipo, se define el nombre que queremos para ese parámetro.

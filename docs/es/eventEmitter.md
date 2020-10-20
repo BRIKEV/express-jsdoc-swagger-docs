@@ -1,4 +1,4 @@
-# Event emitter
+# Emisor de eventos
 
 Se expone un [event emitter](https://nodejs.org/api/events.html) por si se quisiera saber más sobre lo que está pasando mientras se parsean los comentarios o el resultado de nuestro swagger.
 
