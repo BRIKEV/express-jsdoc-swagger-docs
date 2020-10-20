@@ -1,20 +1,20 @@
 - Getting started
 
-  - [Introduction](README.md)
-  - [Configuration](configuration.md?id=configuration)
-    - [Options](configuration.md?id=configuration)
-    - [Example](configuration.md?id=full-example)
-  - [Schemas / Components](components.md)
+  - [Introducción](README.md)
+  - [Configuración](configuration.md?id=configuration)
+    - [Opciones](configuration.md?id=configuration)
+    - [Ejemplo](configuration.md?id=full-example)
+  - [Esquemas / Componentes](components.md)
   - [Endpoints](responses.md)
-    - [Responses](responses.md)
+    - [Respuestas](responses.md)
     - [Request body](requestBody.md)
-    - [Parameters](parameters.md)
-    - [Examples](examples.md)
-    - [Tags](tags.md)
-  - [Security](security.md)
+    - [Parámetros](parameters.md)
+    - [Ejemplos](examples.md)
+    - [Etiquetas](tags.md)
+  - [Seguridad](security.md)
 
-- Advanced usage
+- Conceptos avanzados
 
-  - [Extend your swagger file](merge.md)
-  - [Event emitter](eventEmitter.md)
-  - [Combine schemas](combineSchemas.md)
+  - [ Extender tu archivo de swagger](merge.md)
+  - [Emisor de eventos](eventEmitter.md)
+  - [Combinar esquemas](combineSchemas.md)
