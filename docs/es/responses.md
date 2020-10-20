@@ -11,7 +11,7 @@ Para añadir [responses](https://swagger.io/docs/specification/describing-respon
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 ```
 
-Dónde:
+Donde:
 - `@summary` es la descipción del endpoint.
 - `@return` define la respuesta.
 - El [tipo](https://swagger.io/specification/#data-types) de define entre `{}`.
