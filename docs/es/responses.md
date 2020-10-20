@@ -1,5 +1,5 @@
 # Responses
-To add [responses](https://swagger.io/docs/specification/describing-responses/) to your endpoints with express-jsdoc-swagger, you could add these comments:
+Para añadir [responses](https://swagger.io/docs/specification/describing-responses/) a tus endpoints con `express-jsdoc-swagger`, puedes añadir los siguientes comentarios:
 
 ```javascript
 /**
@@ -11,14 +11,14 @@ To add [responses](https://swagger.io/docs/specification/describing-responses/) 
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 ```
 
-Where:
-- `@summary` is the endpoint description.
-- `@return` is used to define the response.
-- [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define the HTTP status code.
-- The following option, separated between ` - `, is the description.
+Dónde:
+- `@summary` es la descipción del endpoint.
+- `@return` define la respuesta.
+- El [tipo](https://swagger.io/specification/#data-types) de define entre `{}`.
+- Después del tipo, se define el código de estado HTTP.
+- La siguiente opción, separada entre ` - `, es la descripción.
 
-You can mark specific operations as deprecated with `@deprecated` keyword:
+Puede marcar un endpoint como deprecado con `@deprecated`:
 ```javascript
 /**
  * GET /api/v1/album
@@ -33,11 +33,11 @@ app.get('/api/v1/album', (req, res) => (
   })
 ));
 ```
-This looks like:
+Y el resultado será el siguiente:
 
-<img src="./assets/deprecated.png"/>
+<img src="../assets/deprecated.png"/>
 
-Also you can assign a list of tags to each API operation:
+También se puede asignar una serie de `tags` a cada endpoint:
 ```javascript
 /**
  * GET /api/v2/album
@@ -53,9 +53,9 @@ app.get('/api/v2/album', (req, res) => (
   })
 ));
 ```
-> If you want to know more about `@tags`, please visit [tags](tags.md) section.
+> Si quieres saber más acerda de los `@tags`, por favor visita la sección [tags](tags.md).
 
-You can return a common schema:
+Se puede retornar un esquema *(Song)*:
 ```javascript
 /**
  * GET /api/v1/albums
@@ -69,16 +69,16 @@ app.get('/api/v1/albums', (req, res) => (
   }])
 ));
 ```
-In this case:
-- The endpoint returns a Song array.
-- The last option of the keyword `@return` *(application/json)* specify the response media types. This is optional and its default value is *application/json*.
+En este caso:
+- El endpoint devuelve un array de caciones.
+- La última opción del `@return` *(application/json)* específica los tipos de respuesta. Esto es opcional y su valor por defecto es *application/json*.
 
-The result in swagger UI will be this:
+El swagger resultante será:
 
-<img src="./assets/response-component.png"/>
+<img src="../assets/response-component.png"/>
 
-> To learn how to add examples of your endpoint's output, check out the [examples](examples.md) section.
+> Para aprender a añadir ejemplos de la salida de tu endpoint, mira la sección [examples](examples.md).
 
-> To learn how define components schemas, please visit [components](components.md) section.
+> Para aprender cómo definir los componentes, por favor visite la sección [components](components.md).
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/responses).
+> Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/responses).
