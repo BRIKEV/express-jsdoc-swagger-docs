@@ -10,7 +10,7 @@ app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 ```
 
 Donde:
-- `@param` es utilizado para definir un parametro.
+- `@param` es utilizado para definir un parámetro.
 - [El type](https://swagger.io/specification/#data-types) está definido entre `{}`.
 - Después del tipo, puedes definir la palabra reservada **request.body**. Está debe tener el valor que tu queres usar como body de la petición.
 - La siguiente opción, separada por ` - `, es la descripción.
@@ -76,7 +76,7 @@ El resultado en SwaggerUI sería algo así:
 
 ### Body como parámetro de formulario
 
-Puedes enviar parametros sin necesidad de usar un componente. Para eso puedes crear comentarios de la siguiente manera:
+Puedes enviar parámetros sin necesidad de usar un componente. Para eso puedes crear comentarios de la siguiente manera:
 
 ```javascript
 /**
@@ -89,7 +89,7 @@ app.post('/api/v1/songs', (req, res) => res.json({}));
 ```
 
 Donde:
-- `@param` es utilizado para definir un parametro.
+- `@param` es utilizado para definir un parámetro.
 - [El type](https://swagger.io/specification/#data-types) está definido entre `{}`.
 - Después del tipo, tenemos que definir la key que queremos como parámetro seguido del **form**.
 - La siguiente opción, separada por ` - `, es la descripción.
