@@ -1,5 +1,5 @@
 # Parameters
-To add [parameters](https://swagger.io/docs/specification/describing-parameters/) to your endpoints with express-jsdoc-swagger, you could add these comments:
+Para añaidr [parameters](https://swagger.io/docs/specification/describing-parameters/) a tus endpoints con `express-jsdoc-swagger`, puedes añadir los siguientes comentarios:
 
 ```javascript
 /**
@@ -12,17 +12,17 @@ To add [parameters](https://swagger.io/docs/specification/describing-parameters/
 app.get('/api/v1/:id', (req, res) => res.send('Hello World!'));
 ````
 
-Where:
-- `@param` is used to define one parameter.
-- [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define the key you want for the parameter.
-- You can define the status of your param like this:
-  - `* @param {string} name.query.required` name will be a required query param.
-  - `* @param {string} name.query.deprecated` name will be a deprecated query param.
-  - `* @param {string} name.query` name will be a query param.
-- The following option, separated between ` - `, is the description.
+Donde:
+- `@param` se utiliza para definir un parámetro.
+- El [tipo](https://swagger.io/specification/#data-types) se define entre `{}`.
+- Después del tipo, se define el nombre que queremos para ese parámetro.
+- Puedes definir el estado de tu parámetro así:
+  - `* @param {string} name.query.required` donde `name` será un param de consulta requerido.
+  - `* @param {string} name.query.deprecated` donde `name` será un parámetro de consulta deprecado.
+  - `* @param {cadena} name.query` donde `name` será un parámetro de consulta.
+- La siguiente opción, separada entre "-", es la descripción.
 
-You can add **enum values** to your parameters like this:
+Se pueden añadir **valores númericos (enum)** a los parámetros así:
 
 ```javascript
 /**
@@ -34,10 +34,10 @@ You can add **enum values** to your parameters like this:
  */
 ```
 
-The last parameter can be used as an enum, or you can switch between enum and description.
+El último parámetro puede ser usado como un enum, o se puede cambiar de orden entre enum y descripción.
 
-The result in swagger UI will be this:
+El resultado en la interfaz de usuario será este:
 
-<img src="./assets/parameters.png"/>
+<img src="../assets/parameters.png"/>
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/parameters).
+> Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/parameters).

@@ -1,6 +1,6 @@
-# Configuration
+# Configuración
 
-To start using the package you need to add a configuration object. This object has the following options:
+Para empezar a utilizar el paquete, hay que añadir un objeto de configuración. Este objeto tiene las siguientes opciones:
 
 - [info](configuration.md?id=info)
 - [servers](configuration.md?id=servers)
@@ -10,9 +10,9 @@ To start using the package you need to add a configuration object. This object h
 
 ## Info
 
-The info options is the same as swagger specifies in [their documentation](https://swagger.io/specification/#info-object). It provides metadata about the API.
+Las opciones de `info` son las mismas que swagger especifica en [su documentación](https://swagger.io/specification/#info-object) y proporciona metadatos sobre el API.
 
-#### Info option example
+#### Ejemplo
 
 ```javascript
 {
@@ -34,9 +34,9 @@ The info options is the same as swagger specifies in [their documentation](https
 
 ## Servers
 
-The servers options are the same as swagger specifies in [their documentation](https://swagger.io/specification/#server-object). An array of Server Objects, which provide connectivity information to a target server.
+Las opciones de `servers` son las mismas que swagger especifica en [su documentación](https://swagger.io/specification/#server-object). Se trata de un `Array` de objetos que proporciona información de conectividad a a un servidor destino.
 
-#### Server option example
+#### Ejemplo
 
 ```javascript
 {
@@ -59,7 +59,7 @@ The servers options are the same as swagger specifies in [their documentation](h
 
 ## Security
 
-The security options are the same as swagger specifies in [their documentation](https://swagger.io/specification/#security-requirement-object). A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used.
+Las opciones de `security` son las mismas que swagger especifica en [su documentación](https://swagger.io/specification/#security-requirement-object). Consiste la configuración de los mecanismos de seguridad que pueden utilizarse en la API. Esto incluye objetos, que se corresponden a los distintas opciones de seguridad que se podrán utilizar.
 
 #### Security option example
 
@@ -80,7 +80,7 @@ The security options are the same as swagger specifies in [their documentation](
 
 ## filesPattern
 
-This required option you could add a path to one file or a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)) to multiple files.
+Esta opción, la cual es requerida, podría añadir una ruta a un archivo o a un [patrón global](https://en.wikipedia.org/wiki/Glob_(programming)) de varios archivos.
 
 #### filesPAttern option example
 
@@ -98,9 +98,9 @@ This required option you could add a path to one file or a [glob pattern](https:
 
 ## baseDir
 
-App absolute path.
+Ruta absoluta de la app
 
-#### baseDir option example
+#### Ejemplo
 
 ```javascript
 {
@@ -108,15 +108,15 @@ App absolute path.
 }
 ```
 
-## Full example
+## Ejemplo completo
 
 ```javascript
 const express = require('express');
 
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
-// This is a full set of options
-// It is not neccesary to complete every option
+// Este es un ejemplo completo
+// No es necesario completar todas las opciones
 const options = {
   info: {
     version: '1.0.0',

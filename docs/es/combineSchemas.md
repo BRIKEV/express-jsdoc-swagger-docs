@@ -1,5 +1,5 @@
-# Combine schemas
-To combine schemas, as you could do in [Swagger](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/), to your endpoints with express-jsdoc-swagger, you could add these comments:
+# Combinar esquemas
+Para combinar los esquemas, al igual que se puede hacer en [Swagger](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/), con `express-jsdoc-swagger` se haría lo siguiente:
 
 ```javascript
 /**
@@ -23,19 +23,19 @@ To combine schemas, as you could do in [Swagger](https://swagger.io/docs/specifi
  * @return {oneOf|IntrumentalSong|PopSong} 200 - success response - application/json
  */
 ```
-In the above example, you can see that we are using `oneOf` and two schemas that we want to use as a response to our endpoint.
+En el ejemplo anterior, se puede ver que se ha usado `oneOf` y a continuación se han definido los dos esquemas *(Song y PopSong)* que queremos usar como respuesta de nuestro endpoint
 
-It's **important** that the criteria must be the first value and be followed by `|` and each schema, like this:
+Es **important** que la palabra reservada `oneOf` sea el primer valor y que esté seguido de `|` y el esquema, como se puede ver a continuación:
 ```
 {<criteria>|<schema>|...|<schemaN>}
 
 {oneOf|IntrumentalSong|PopSong}
 ```
 
-We currently support, `oneOf`, `anyOf` and `allOf`.
+Actualmente la librería soporta las opciones, `oneOf`, `anyOf` y `allOf`.
 
-> You can extend our support to Open API full support by adding extending your own swagger.json, please visit [Extend your swagger file section](merge.md) to more info.
+> Se puede ampliar las funcionalidades que express-jsdoc-swagger a un soporte completo de Open API, extendiendo tu propio swagger.json, para saber más visita la sección [Extender tu archivo de swagger](merge.md).
 
-> To learn how define components schemas, please visit [components / schemas](components.md) section.
+> Para aprender cómo definir los esquemas de los componentes, por favor visite la sección [Componentes / esquemas](components.md).
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/combineSchemas/index.js).
+> Puedes ver más ejemplos [aquí](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/combineSchemas/index.js).
