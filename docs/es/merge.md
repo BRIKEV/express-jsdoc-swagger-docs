@@ -1,10 +1,10 @@
-# Extend your swagger file
+# Extender tu archivo de swagger
 
-This option is useful if you have an old project, and you only want to add comments on new endpoints, or you want to add new features that we don't support.
+Esta opción es útil si tienes un proyecto antiguo, y sólo quieres añadir comentarios sobre nuevos `endpoints`, o quieres añadir nuevas características que no soportemos.
 
-## Example
-You could have one `swagger.json` already defined like this one:
-<details><summary>Click to expand</summary>
+## Ejemplo
+Podrías tener un `swagger.json` ya definido como este:
+<details><summary>Click para verlo completo</summary>
 
 ```js
 {
@@ -206,15 +206,15 @@ You could have one `swagger.json` already defined like this one:
 ```
 </details>
 
-Which renders the next SwaggerUI:
+El cual genera el siguiente swagger:
 
-<img src="./assets/merge.png"/>
+<img src="../assets/merge.png"/>
 
-If you want to *integrate* your API written with `jsdoc` comments and your `swagger.json`, you can check out this example:
+Para *integrar* tu API escrita con comentarios `jsdoc` y tu `swagger.json`, puedes ver el siguiente ejemplo:
 
 ```javascript
 const express = require('express');
-const oldSwagger = require('./swagger.json'); // This file contains the previously mentioned swagger.json
+const oldSwagger = require('./swagger.json'); // Este archivo contiene el swagger.json que hemos mencionado antes.
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
 const options = {
@@ -229,10 +229,10 @@ const options = {
 const app = express();
 const port = 3001;
 
-// To merge swagger.json we had with the new endpoints, It will be passed as a second parameter:
+// Para integrar el swagger.json que teníamos con los nuevos endpoints, este se pasará como segundo parámetro:
 expressJSDocSwagger(app)(options, oldSwagger);
 
-// Example of new endpoint:
+// Ejemplo de nuevos endpoints documentados con la librería:
 /**
  * GET /api/v1/albums
  * @summary This is the summary or description of the endpoint
@@ -250,7 +250,7 @@ app.listen(port, () => console.log(`Example app listening at http://localhost:${
 
 ```
 
-Finally, the result in the SwaggerUI will be the following:
+El swagger resultante será el siguiente:
 
 <img src="./assets/merge-result.png"/>
 
