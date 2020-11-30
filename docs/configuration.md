@@ -96,6 +96,14 @@ This required option you could add a path to one file or a [glob pattern](https:
 }
 ```
 
+you could also use array of files
+
+```javascript
+{
+  "filesPattern": ['./**/*.controller.js', './**/*.route.js']
+}
+```
+
 ## baseDir
 
 App absolute path.

@@ -96,6 +96,14 @@ Esta opción, la cual es requerida, podría añadir una ruta a un archivo o a un
 }
 ```
 
+you could also use array of files
+
+```javascript
+{
+  "filesPattern": ['./**/*.controller.js', './**/*.route.js']
+}
+```
+
 ## baseDir
 
 Ruta absoluta de la app
