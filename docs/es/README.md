@@ -52,6 +52,10 @@ const options = {
   apiDocsPath: '/v3/api-docs',
   // Set non-required fields as nullable by default
   notRequiredAsNullable: false,
+  // You can customize your UI options.
+  // you can extend swagger-ui-express config. You can checkout an example of this
+  // in the `example/configuration/swaggerOptions.js`
+  swaggerUiOptions: {},
 };
 
 const app = express();
