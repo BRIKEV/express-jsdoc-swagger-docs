@@ -1,5 +1,5 @@
 # Combine schemas
-To combine schemas, as you could do in [Swagger](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/), to your endpoints with express-jsdoc-swagger, you could add these comments:
+To combine schemas as you could do in [Swagger](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/) you could add these comments:
 
 ```javascript
 /**
@@ -23,16 +23,20 @@ To combine schemas, as you could do in [Swagger](https://swagger.io/docs/specifi
  * @return {oneOf|IntrumentalSong|PopSong} 200 - success response - application/json
  */
 ```
-In the above example, you can see that we are using `oneOf` and two schemas that we want to use as a response to our endpoint.
+In the example above, you can see that we are using `oneOf` and two schemas that we want to use as a response to our endpoint.
 
-It's **important** that the criteria must be the first value and be followed by `|` and each schema, like this:
+It's **important** that the criteria (`oneOf`, `anyOf` and `allOf`) must be the first value and be followed by `|` and each schema, like this:
 ```
 {<criteria>|<schema>|...|<schemaN>}
 
 {oneOf|IntrumentalSong|PopSong}
+
+// Or
+{IntrumentalSong|PopSong}
+// one of is the default value
 ```
 
-We currently support, `oneOf`, `anyOf` and `allOf`.
+We currently support, `oneOf`, `anyOf` and `allOf`. Default value `oneOf`.
 
 > You can extend our support to Open API full support by adding extending your own swagger.json, please visit [Extend your swagger file section](merge.md) to more info.
 

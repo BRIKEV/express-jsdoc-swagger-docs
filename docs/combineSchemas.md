@@ -30,9 +30,13 @@ It's **important** that the criteria (`oneOf`, `anyOf` and `allOf`) must be the 
 {<criteria>|<schema>|...|<schemaN>}
 
 {oneOf|IntrumentalSong|PopSong}
+
+// Or
+{IntrumentalSong|PopSong}
+// one of is the default value
 ```
 
-We currently support, `oneOf`, `anyOf` and `allOf`.
+We currently support, `oneOf`, `anyOf` and `allOf`. Default value `oneOf`.
 
 > You can extend our support to Open API full support by adding extending your own swagger.json, please visit [Extend your swagger file section](merge.md) to more info.
 

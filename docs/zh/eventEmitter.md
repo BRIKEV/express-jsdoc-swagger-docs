@@ -6,7 +6,7 @@ These are the events we expose:
 
 - **error** you can subscribe to this event to debug if there is a problem while the parsing process is running.
 - **process** you can subscribe to this event to debug how jsdoc comments are being parsed into swagger object per entity.
-- **finish** you can subscribe to receive the result of the swagger object generated.
+- **finish** you can subscribe to receive the result of the swagger object generated and some methods we use to process the swagger object in case you want to use them in your code.
 
 ## Example
 
@@ -43,9 +43,9 @@ listener.on('process', ({ entity, swaggerObject }) => {
   console.log(swaggerObject);
 });
 
-listener.on('finish', swaggerObject => {
+listener.on('finish', (swaggerObject, processMethods) => {
   console.log('Finish');
-  console.log(swaggerObject);
+  console.log(swaggerObject, processMethods);
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));

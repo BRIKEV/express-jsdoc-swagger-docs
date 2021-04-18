@@ -169,8 +169,18 @@ const options = {
       scheme: 'basic',
     },
   },
-  file: './main.js',
+  filesPattern: './main.js',
   baseDir: __dirname,
+  // URL where SwaggerUI will be rendered
+  swaggerUIPath: '/api-docs',
+  // Expose OpenAPI UI
+  exposeSwaggerUI: true,
+  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  exposeApiDocs: false,
+  // Open API JSON Docs endpoint.
+  apiDocsPath: '/v3/api-docs',
+  // Set non-required fields as nullable by default
+  notRequiredAsNullable: false,
 };
 
 const app = express();

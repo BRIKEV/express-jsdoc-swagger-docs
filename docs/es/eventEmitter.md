@@ -1,12 +1,12 @@
 # Emisor de eventos
 
-Se expone un [event emitter](https://nodejs.org/api/events.html) por si se quisiera saber más sobre lo que está pasando mientras se parsean los comentarios o el resultado de nuestro swagger.
+Se expone un [event emitter](https://nodejs.org/api/events.html) por si se quisiera saber más sobre lo que está pasando mientras se parsean los comentarios o el OpenAPI esquema que se va generando.
 
 Estos son los eventos que se exponen:
 
 - **error** puedes suscribirte a este evento para depurar si hay un problema mientras se ejecuta el proceso de análisis.
 - **proceso** puedes suscribirte a este evento para depurar cómo se analizan los comentarios de jsdoc en el objeto de swagger por entidad.
-- **finalizar** puedes suscribirte para recibir el resultado del objeto de arrogancia generado.
+- **finalizar** puedes suscribirte para recibir el resultado del objeto de OpenAPI generado. Además puedes acceder a métodos que usamos para parsear la información.
 
 ## Example
 
@@ -43,9 +43,9 @@ listener.on('process', ({ entity, swaggerObject }) => {
   console.log(swaggerObject);
 });
 
-listener.on('finish', swaggerObject => {
+listener.on('finish', (swaggerObject, processMethods) => {
   console.log('Finish');
-  console.log(swaggerObject);
+  console.log(swaggerObject, processMethods);
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));

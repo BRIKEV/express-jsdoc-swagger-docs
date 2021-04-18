@@ -116,15 +116,15 @@ Ruta absoluta de la app
 }
 ```
 
-## Ejemplo completo
+## Full example
 
 ```javascript
 const express = require('express');
 
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
-// Este es un ejemplo completo
-// No es necesario completar todas las opciones
+// This is a full set of options
+// It is not neccesary to complete every option
 const options = {
   info: {
     version: '1.0.0',
@@ -169,8 +169,18 @@ const options = {
       scheme: 'basic',
     },
   },
-  file: './main.js',
+  filesPattern: './main.js',
   baseDir: __dirname,
+  // URL where SwaggerUI will be rendered
+  swaggerUIPath: '/api-docs',
+  // Expose OpenAPI UI
+  exposeSwaggerUI: true,
+  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  exposeApiDocs: false,
+  // Open API JSON Docs endpoint.
+  apiDocsPath: '/v3/api-docs',
+  // Set non-required fields as nullable by default
+  notRequiredAsNullable: false,
 };
 
 const app = express();

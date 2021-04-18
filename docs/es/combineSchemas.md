@@ -30,9 +30,13 @@ Es **important** que la palabra reservada `oneOf` sea el primer valor y que est�
 {<criteria>|<schema>|...|<schemaN>}
 
 {oneOf|IntrumentalSong|PopSong}
+
+// Or
+{IntrumentalSong|PopSong}
+// one of is the default value
 ```
 
-Actualmente la librería soporta las opciones, `oneOf`, `anyOf` y `allOf`.
+Actualmente la librería soporta las opciones, `oneOf`, `anyOf` y `allOf`. `oneOf` es el valor por defecto.
 
 > Se puede ampliar las funcionalidades que express-jsdoc-swagger a un soporte completo de Open API, extendiendo tu propio swagger.json, para saber más visita la sección [Extender tu archivo de swagger](merge.md).
 

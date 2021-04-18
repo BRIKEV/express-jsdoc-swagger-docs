@@ -96,6 +96,14 @@ This required option you could add a path to one file or a [glob pattern](https:
 }
 ```
 
+you could also use array of files
+
+```javascript
+{
+  "filesPattern": ['./**/*.controller.js', './**/*.route.js']
+}
+```
+
 ## baseDir
 
 App absolute path.
@@ -161,8 +169,18 @@ const options = {
       scheme: 'basic',
     },
   },
-  file: './main.js',
+  filesPattern: './main.js',
   baseDir: __dirname,
+  // URL where SwaggerUI will be rendered
+  swaggerUIPath: '/api-docs',
+  // Expose OpenAPI UI
+  exposeSwaggerUI: true,
+  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  exposeApiDocs: false,
+  // Open API JSON Docs endpoint.
+  apiDocsPath: '/v3/api-docs',
+  // Set non-required fields as nullable by default
+  notRequiredAsNullable: false,
 };
 
 const app = express();
@@ -179,6 +197,5 @@ app.get('/api/v1', (req, res) => res.send('Hello World!'));
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 ```
-
 
 
