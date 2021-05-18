@@ -15,6 +15,7 @@
 
 - Advanced usage
 
+  - [Express oas validator](/es/validator.md)
   - [Extend your swagger file](/zh/merge.md)
   - [Event emitter](/zh/eventEmitter.md)
   - [Combine schemas](/zh/combineSchemas.md)

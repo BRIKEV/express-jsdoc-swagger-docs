@@ -1,15 +1,15 @@
 # express-oas-validator
 
-You can add validation to your request params, headers, body and response with [express-oas-validator](https://github.com/BRIKEV/express-oas-validator) a simple module that export some validation methods and an express middleware to unify the validation with the Documentation you provide for your API.
+Puedes añadir validación a los parámetros request params, headers, body y a la response con [express-oas-validator](https://github.com/BRIKEV/express-oas-validator). Un módulo simple que exporta unos métodos de validación y un middleware de express para que puedas validar los parametros de tu request con la documentación que generas en tu API.
 
 ## Quick start
-Install using the node package registry:
+Instalar express-oas-validator con npm:
 
 ```
 npm install --save express-oas-validator
 ```
 
-After this you have to initialize using the `finish` event. More info in this [sections](eventEmitter.md).
+Después es necesario hacer init con la config de swagger al terminar el evento `finish`. Más información sobre esto en esta [sección](eventEmitter.md).
 
 ```js
 const instance = expressJSDocSwagger(app)(options);
@@ -20,7 +20,7 @@ instance.on('finish', data => {
 });
 ```
 
-This is a full example on how it works.
+Ejemplo completo de como integrarlo con `express-jsdoc-swagger`
 
 ```js
 const express = require('express');
@@ -107,14 +107,14 @@ module.exports = serverApp;
 
 ### init(openApiDef, options)
 
-This methods initiates the validator so that `validateRequest` and `validateResponse` can be used in different files.
+Este método inicializa el validador para poder usar `validateRequest` y `validateResponse`.
 
 **Parameters**
 
 | Name        | Type   | Description        |
 | ------------|:------:| ------------------:|
-| openApiDef  | object | OpenAPI definition |
-| options     | object | Options to extend the errorHandler or Ajv configuration |
+| openApiDef  | object | OpenAPI definición |
+| options     | object | Options para extender la config de Ajv |
 
 ```js
 const swaggerDefinition = require('./swaggerDefinition.json');
@@ -125,8 +125,7 @@ init(swaggerDefinition);
 
 ## validateRequest(endpointConfig)
 
-
-Express middleware that receives this configuration options and validates each of the options.
+El middleware recibe esta configuración.
 
 ```js
 const DEFAULT_CONFIG = {
@@ -159,15 +158,15 @@ app.get('/api/v1/albums/:id', validateRequest({ headers: false }), (req, res) =>
 
 ## validateResponse(payload, req, status)
 
-Method to validate response payload based on the docs and the status we want to validate.
+Método para validad la respuesta de una petición con la documentación generada.
 
 **Parameters**
 
 | Name        | Type   | Description        |
 | ------------|:------:| ------------------:|
-| payload     | *      | response we want to validate |
-| req         | object | Options to extend the errorHandler or Ajv configuration |
-| status      | number | esponse status we want to validate |
+| payload     | *      | Respuesta a validar |
+| req         | object | Options para extender la config de Ajv |
+| status      | number | estatus de la respuesta que queremos validar |
 
 
 **Example**
