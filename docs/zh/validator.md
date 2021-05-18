@@ -1,8 +1,9 @@
 # express-oas-validator
 
-You can add validation to your request params, headers, body and response with [express-oas-validator](https://github.com/BRIKEV/express-oas-validator) a simple module that export some validation methods and an express middleware to unify the validation your API provides with the Documentation you provide. 
+You can add validation to your request params, headers, body and response with [express-oas-validator](https://github.com/BRIKEV/express-oas-validator) a simple module that export some validation methods and an express middleware to unify the validation with the Documentation you provide for your API.
 
 ## Quick start
+
 Install using the node package registry:
 
 ```
