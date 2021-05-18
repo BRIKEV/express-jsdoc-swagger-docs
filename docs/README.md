@@ -180,7 +180,7 @@ You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagge
 
 ## Validator
 
-We develope a new package that validates works as a validator of your API endpoints with the documentation you create with this package. This package is [express-oas-validator](https://github.com/BRIKEV/express-oas-validator).
+We developed a new package that works as a validator of your API endpoints with the documentation you create with `express-jsdoc-swagger`. This package is [express-oas-validator](https://github.com/BRIKEV/express-oas-validator).
 
 **Example**
 
