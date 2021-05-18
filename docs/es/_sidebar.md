@@ -15,6 +15,7 @@
 
 - Conceptos avanzados
 
-  - [ Extender tu archivo de swagger](/es/merge.md)
+  - [Express oas validator](/es/validator.md)
+  - [Extender tu archivo de swagger](/es/merge.md)
   - [Emisor de eventos](/es/eventEmitter.md)
   - [Combinar esquemas](/es/combineSchemas.md)
