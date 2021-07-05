@@ -73,11 +73,11 @@ app.get('/api/v1', (req, res) => res.json({
 }));
 
 app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));
-
 ```
 
 ## Examples
 1. Basic configuration
+
 ```javascript
 const options = {
   info: {
@@ -110,6 +110,7 @@ const options = {
 ```
 
 2. Components definition
+
 ```javascript
 /**
  * A song type
@@ -121,6 +122,7 @@ const options = {
 ```
 
 3. Endpoint that returns a `Songs` model array
+
 ```javascript
 /**
  * GET /api/v1/albums
@@ -136,6 +138,7 @@ app.get('/api/v1/albums', (req, res) => (
 ```
 
 4. Basic endpoint definition with tags, params and basic authentication
+
 ```javascript
 /**
  * GET /api/v1/album
@@ -154,6 +157,7 @@ app.get('/api/v1/album', (req, res) => (
 ```
 
 5. Basic endpoint definition with code example for response body
+
 ```javascript
 /**
  * GET /api/v1/albums

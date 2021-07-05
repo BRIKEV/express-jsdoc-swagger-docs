@@ -21,6 +21,7 @@ npm i express-jsdoc-swagger
 ```
 
 ## Uso
+
 ```javascript
 const express = require('express');
 const expressJSDocSwagger = require('express-jsdoc-swagger');
@@ -73,11 +74,12 @@ app.get('/api/v1', (req, res) => res.json({
 }));
 
 app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));
-
 ```
 
 ## Ejemplos
+
 1. Configuración básica
+
 ```javascript
 const options = {
   info: {
@@ -99,6 +101,7 @@ const options = {
 ```
 
 2. Definición de los componentes
+
 ```javascript
 /**
  * A song type
@@ -110,6 +113,7 @@ const options = {
 ```
 
 3. Endpoint que retorna un array de `Songs`
+
 ```javascript
 /**
  * GET /api/v1/albums
@@ -125,6 +129,7 @@ app.get('/api/v1/albums', (req, res) => (
 ```
 
 4. Definición básica de un endpoint con tags, parámetros y una autenticación básica
+
 ```javascript
 /**
  * GET /api/v1/album
@@ -143,6 +148,7 @@ app.get('/api/v1/album', (req, res) => (
 ```
 
 5. Endpoint básico con ejemplo del cuerpo de una respuesta
+
 ```javascript
 /**
  * GET /api/v1/albums
