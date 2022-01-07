@@ -1,18 +1,18 @@
-# Configuration
+# Configuração
 
-To start using the package you need to add a configuration object. This object has the following options:
+Para começar usando o pacote você precisa para adicionar um objeto de configuração. Este objeto tem as seguintes opções:
 
-- [info](configuration.md?id=info)
-- [servers](configuration.md?id=servers)
-- [security](configuration.md?id=security)
-- [filesPattern](configuration.md?id=filespattern)
-- [baseDir](configuration.md?id=basedir)
+- [info](/pt/configuration.md?id=info)
+- [servers](/pt/configuration.md?id=servers)
+- [security](/pt/configuration.md?id=security)
+- [filesPattern](/pt/configuration.md?id=filespattern)
+- [baseDir](/pt/configuration.md?id=basedir)
 
 ## Info
 
-The info options is the same as swagger specifies in [their documentation](https://swagger.io/specification/#info-object). It provides metadata about the API.
+As opções de informação são as mesmas como o Swagger especifica na [documentação deles](https://swagger.io/specification/#info-object). Ela provê metadados sobre a API.
 
-#### Info option example
+#### Exemplo da Opção Info
 
 ```javascript
 {
@@ -34,24 +34,24 @@ The info options is the same as swagger specifies in [their documentation](https
 
 ## Servers
 
-The servers options are the same as swagger specifies in [their documentation](https://swagger.io/specification/#server-object). An array of Server Objects, which provide connectivity information to a target server.
+A opção dos servidores são as mesmas como o Swagger especifica na [documentação deles](https://swagger.io/specification/#server-object). Um array de objeto Server, que provê informações de conectividade para um servidor alvo.
 
-#### Server option example
+#### Exemplo de opção Server
 
 ```javascript
 {
   "servers": [
     {
       "url": "https://development.gigantic-server.com/v1",
-      "description": "Development server"
+      "description": "Servidor de Desenvolvimento"
     },
     {
       "url": "https://staging.gigantic-server.com/v1",
-      "description": "Staging server"
+      "description": "Servidor de Testes"
     },
     {
       "url": "https://api.gigantic-server.com/v1",
-      "description": "Production server"
+      "description": "Servidor de Produção"
     }
   ]
 }
@@ -59,9 +59,9 @@ The servers options are the same as swagger specifies in [their documentation](h
 
 ## Security
 
-The security options are the same as swagger specifies in [their documentation](https://swagger.io/specification/#security-requirement-object). A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used.
+As opções de segurança são as mesmas que o Swagger especifica na [documentação deles](https://swagger.io/specification/#security-requirement-object). Uma declaração de quais mecanismos de segurança podem ser usados na API. A lista de valores inclui objetos alternativos de requerimentos de segurança que podem ser usados.
 
-#### Security option example
+#### Exemplo de Segurança
 
 ```javascript
 {
@@ -80,9 +80,9 @@ The security options are the same as swagger specifies in [their documentation](
 
 ## filesPattern
 
-This required option you could add a path to one file or a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)) to multiple files.
+Esta opção obrigatória permite você adicionar um caminho para um arquivo ou um [padrão](<https://en.wikipedia.org/wiki/Glob_(programming)>) para múltiplos arquivos.
 
-#### filesPAttern option example
+#### Exemplo de opção filesPattern
 
 ```javascript
 {
@@ -96,7 +96,7 @@ This required option you could add a path to one file or a [glob pattern](https:
 }
 ```
 
-you could also use array of files
+você também pode usar um array de arquivos
 
 ```javascript
 {
@@ -106,9 +106,9 @@ you could also use array of files
 
 ## baseDir
 
-App absolute path.
+O caminho absoluto da Aplicação.
 
-#### baseDir option example
+#### Exemplo da opção baseDir
 
 ```javascript
 {
@@ -116,26 +116,26 @@ App absolute path.
 }
 ```
 
-## Full example
+## Exemplo completo
 
 ```javascript
 const express = require('express');
 
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
-// This is a full set of options
-// It is not neccesary to complete every option
+// Este é o exemplo completo de opções
+// Não é necessário completar todas as opções
 const options = {
   info: {
     version: '1.0.0',
-    title: 'Albums store',
+    title: 'Loja de Albuns',
     license: {
       name: 'MIT',
       url: 'http://example.com',
     },
-    description: 'API desctiption',
+    description: 'Descrição da API',
     contact: {
-      name: 'contact name',
+      name: 'nome do contato',
       url: 'http://example.com',
       email: 'test@test.com',
     },
@@ -144,17 +144,15 @@ const options = {
   servers: [
     {
       url: 'https://{username}.gigantic-server.com:{port}/{basePath}',
-      description: 'The production API server',
+      description: 'O servidor de produção da API',
       variables: {
         username: {
           default: 'demo',
-          description: 'this value is assigned by the service provider, in this example `gigantic-server.com`',
+          description:
+            'Este valor é associado ao provedor do serviço, neste exemplo é `gigantic-server.com`',
         },
         port: {
-          enum: [
-            '8443',
-            '443',
-          ],
+          enum: ['8443', '443'],
           default: '8443',
         },
         basePath: {
@@ -171,15 +169,15 @@ const options = {
   },
   filesPattern: './main.js',
   baseDir: __dirname,
-  // URL where SwaggerUI will be rendered
+  // URL onde o SwaggerUI será renderizado
   swaggerUIPath: '/api-docs',
-  // Expose OpenAPI UI
+  // Expõe OpenAPI UI
   exposeSwaggerUI: true,
-  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  // Expõe a documentação Open API JSON Docs no caminho `apiDocsPath`.
   exposeApiDocs: false,
-  // Open API JSON Docs endpoint.
+  // Caminho do Endpoint Open API JSON Docs.
   apiDocsPath: '/v3/api-docs',
-  // Set non-required fields as nullable by default
+  // Define os campos não obrigatórios como nullable por padrão
   notRequiredAsNullable: false,
 };
 
@@ -190,13 +188,12 @@ expressJSDocSwagger(app)(options);
 
 /**
  * GET /api/v1
- * @summary This is the summary or description of the endpoint
- * @return {string} 200 - success response
+ * @summary Este é o resumo ou descrição do endpoint
+ * @return {string} 200 - resposta com sucesso
  */
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+app.listen(port, () =>
+  console.log(`Example app listening at http://localhost:${port}`)
+);
 ```
-
-
-

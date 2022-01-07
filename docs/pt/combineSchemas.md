@@ -1,5 +1,6 @@
-# Combine schemas
-To combine schemas as you could do in [Swagger](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/) you could add these comments:
+# Combinar esquemas
+
+Para combinar esquemas como você faria no [Swagger](https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/) você pode adicionar estes comentários:
 
 ```javascript
 /**
@@ -23,23 +24,25 @@ To combine schemas as you could do in [Swagger](https://swagger.io/docs/specific
  * @return {oneOf|IntrumentalSong|PopSong} 200 - success response - application/json
  */
 ```
-In the example above, you can see that we are using `oneOf` and two schemas that we want to use as a response to our endpoint.
 
-It's **important** that the criteria (`oneOf`, `anyOf` and `allOf`) must be the first value and be followed by `|` and each schema, like this:
+No exemplo acima, você pode ver que estamos usando `oneOf` e dois esquemas que nós queremos usar como resposta para nosso endpoint.
+
+É **importante** que o critério (`oneOf`, `anyOf` e `allOf`) deve ser o primeiro valor se seguido por `|` e cada esquema, assim:
+
 ```
-{<criteria>|<schema>|...|<schemaN>}
+{<criterio>|<esquema>|...|<esquemaN>}
 
-{oneOf|IntrumentalSong|PopSong}
+{oneOf|MusicaInstrumental|MusicaPop}
 
-// Or
-{IntrumentalSong|PopSong}
-// one of is the default value
+// Ou
+{MusicaInstrumental|MusicaPop}
+// um destes é o valor padrão
 ```
 
-We currently support, `oneOf`, `anyOf` and `allOf`. Default value `oneOf`.
+Atualmente, nós suportamos `oneOf`, `anyOf` e `allOf`. O valor padrão é `oneOf`.
 
-> You can extend our support to Open API full support by adding extending your own swagger.json, please visit [Extend your swagger file section](merge.md) to more info.
+> Você pode extender nosso suporte ao Open API extendendo seu próprio arquivo swagger.json, por favor visite [Sessão Extenda seu arquivo swagger](/pt/merge.md) para mais informações.
 
-> To learn how define components schemas, please visit [components / schemas](components.md) section.
+> Para aprender como definir esquemas de componentes, por favor visite a sessão [componentes / esquemas](/pt/components.md).
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/combineSchemas/index.js).
+> Você pode encontrar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/combineesquemas/index.js).
