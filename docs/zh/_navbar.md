@@ -1,5 +1,4 @@
-- Languages
-  - [English](/)
-  - [Spanish](/es/)
-  - [Chinese](/zh/)
-  - [Portuguese](/pt/)
+* Languages
+  * [English](/)
+  * [Spanish](/es/)
+  * [Chinese](/zh/)
