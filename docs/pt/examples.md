@@ -1,7 +1,8 @@
-# Examples
-To add [examples](https://swagger.io/docs/specification/adding-examples/) to your endpoints with [express-jsdoc-swagger](https://github.com/BRIKEV/express-jsdoc-swagger), you can use the `@example` annotation.
+# Exemplos
 
-The following example illustrates how it can be used to add examples on how the request body must be, as well as what the endpoint is supposed to return for specific status codes.
+Para adicionar [exemplos](https://swagger.io/docs/specification/adding-examples/) nos seus endpoints com [express-jsdoc-swagger](https://github.com/BRIKEV/express-jsdoc-swagger), você pode usar a anotação `@example`.
+
+O exemplo a seguir ilustra como pode ser usado para adicionar exemplos de como o corpo da requisição deve ser, assim como é esperado que o endpoind retorne por códigos de status específicos.
 
 ```javascript
 /**
@@ -31,12 +32,14 @@ The following example illustrates how it can be used to add examples on how the 
  *   "errCode": "EV121"
  * }
  */
-app.post('/api/v1/song', (req, res) => res.send({
-  message: 'You have added a song!',
-}));
+app.post('/api/v1/song', (req, res) =>
+  res.send({
+    message: 'You have added a song!',
+  })
+);
 ```
 
-The result in Swagger UI will look like this:
+O resultado no Swagger UI será assim:
 
 <img src="./assets/examples.png"/>
 
@@ -57,9 +60,9 @@ The sections below describe in more in detail the expected syntax for the `@exam
 [content]
 ```
 
-| Field | Description |
-| --- | --- |
-| Summary | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and *NOT* the summary. |
+| Field   | Description                                                                                                                                                                                                                                                                                   |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Summary | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and _NOT_ the summary.                                                                                       |
 | Content | Example content for the request body. It's imperative that its contents start at a new line below the `@example` tag, and not in the same one. The content can be split into multiple lines if necessary, for better readibility. Indentation and breaklines will be preserved in Swagger UI. |
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/withExamples.js).
@@ -71,10 +74,10 @@ The sections below describe in more in detail the expected syntax for the `@exam
 [content]
 ```
 
-| Field | Description |
-| --- | --- |
+| Field       | Description                                                                                                                                                                                                                                                                                                                                |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Status code | An HTTP status code (ex.: `200`). Keep in mind that any code not available in [validStatusCodes](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/transforms/paths/validStatusCodes.js) will be ignored. Also, it's necessary for a `@return` tag to exist for that same code in order for the example to appear in Swagger UI. |
-| Summary | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and *NOT* the summary. |
-| Content | Example content for the response body. It's imperative that its contents start at a new line below the `@example` tag, and not in the same one. The content can be split into multiple lines if necessary, for better readibility. Indentation and breaklines will be preserved in Swagger UI. |
+| Summary     | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and _NOT_ the summary.                                                                                                                                    |
+| Content     | Example content for the response body. It's imperative that its contents start at a new line below the `@example` tag, and not in the same one. The content can be split into multiple lines if necessary, for better readibility. Indentation and breaklines will be preserved in Swagger UI.                                             |
 
 > You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/responses/withExamples.js).

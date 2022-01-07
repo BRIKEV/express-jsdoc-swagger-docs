@@ -1,17 +1,16 @@
-# Event emitter
+# Emissor de Eventos
 
-We expose an [event emitter](https://nodejs.org/api/events.html) in case you want to know more about what is happening while we parse the comments or the Swagger object result.
+Nós expomos um [emissor de eventos](https://nodejs.org/api/events.html) caso você quiser saber mais sobre o que está acontecendo enquando nós processamos os comentários ou o resultado do objeto Swagger.
 
-These are the events we expose:
+Estes são os eventos que nós expomos:
 
-- **error** you can subscribe to this event to debug if there is a problem while the parsing process is running.
-- **process** you can subscribe to this event to debug how jsdoc comments are being parsed into swagger object per entity.
-- **finish** you can subscribe to receive the result of the swagger object generated and some methods we use to process the swagger object in case you want to use them in your code.
+- **error** você pode se inscrever neste evento para depurar se há algum problema enquanto o processo de analise está executando.
+- **process** você pode se inscrever neste evento para depurar como os comentários jsdoc stão sendo analisados dentro do objeto swagger por entidade.
+- **finish** você pode se inscrever neste evento para receber o objeto swagger de resultado que foi gerado e alguns métodos que nós usamos para processar o objeto swagger em caso você queira usar em seu código.
 
-## Example
+## Exemplo
 
 ```javascript
-  
 const express = require('express');
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
@@ -32,8 +31,8 @@ const port = 3000;
 
 const listener = expressJSDocSwagger(app)(options);
 
-// Event emitter API
-listener.on('error', error => {
+// API Emissão de Eventos
+listener.on('error', (error) => {
   console.error(`Error: ${error}`);
 });
 
@@ -48,8 +47,9 @@ listener.on('finish', (swaggerObject, processMethods) => {
   console.log(swaggerObject, processMethods);
 });
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
-````
+app.listen(port, () =>
+  console.log(`Example app listening at http://localhost:${port}`)
+);
+```
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/eventEmitter).
-
+> Você pode acessar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/eventEmitter).
