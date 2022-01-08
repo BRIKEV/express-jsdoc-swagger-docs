@@ -41,7 +41,7 @@ No exemplo acima, você pode ver que estamos usando `oneOf` e dois esquemas que 
 
 Atualmente, nós suportamos `oneOf`, `anyOf` e `allOf`. O valor padrão é `oneOf`.
 
-> Você pode extender nosso suporte ao Open API extendendo seu próprio arquivo swagger.json, por favor visite [Sessão Extenda seu arquivo swagger](/pt/merge.md) para mais informações.
+> Você pode extender nosso suporte ao Open API estendendo seu próprio arquivo swagger.json, por favor visite [Sessão Estenda seu arquivo swagger](/pt/merge.md) para mais informações.
 
 > Para aprender como definir esquemas de componentes, por favor visite a sessão [componentes / esquemas](/pt/components.md).
 

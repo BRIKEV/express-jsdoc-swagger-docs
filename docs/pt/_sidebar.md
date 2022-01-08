@@ -16,6 +16,6 @@
 - Uso Avançado
 
   - [Validador Express oas](/pt/validator.md)
-  - [Extenda seu arquivo swagger](/pt/merge.md)
+  - [Estenda seu arquivo swagger](/pt/merge.md)
   - [Emissor de Eventos](/pt/eventEmitter.md)
   - [Combinar esquemas](/pt/combineSchemas.md)

@@ -169,7 +169,7 @@ const options = {
   },
   filesPattern: './main.js',
   baseDir: __dirname,
-  // URL onde o SwaggerUI será renderizado
+  // URL onde a SwaggerUI será renderizado
   swaggerUIPath: '/api-docs',
   // Expõe OpenAPI UI
   exposeSwaggerUI: true,

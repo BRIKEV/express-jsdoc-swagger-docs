@@ -1,43 +1,43 @@
-# Parameters
-To add [parameters](https://swagger.io/docs/specification/describing-parameters/) to your endpoints with express-jsdoc-swagger, you could add these comments:
+# Parâmetros
+para adicionar [parâmetros](https://swagger.io/docs/specification/describing-parameters/) aos seus endpoints com express-jsdoc-swagger, você pode adicionar estes comentários:
 
 ```javascript
 /**
  * GET /api/v1/{id}
- * @summary This is the summary or description of the endpoint
- * @param {string} name.query.required - name param description
- * @param {number} id.path - phone number
- * @return {string} 200 - success response
+ * @summary Este é o resumo ou descrição do endpoint
+ * @param {string} name.query.required - descrição do parâmetro name
+ * @param {number} id.path - número do telefone
+ * @return {string} 200 - resposta de sucesso
  */
 app.get('/api/v1/:id', (req, res) => res.send('Hello World!'));
 ````
 
-Where:
-- `@param` is used to define one parameter.
-- [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define the key you want for the parameter.
-- You can define the status of your param like this:
-  - `* @param {string} name.query.required` name will be a required query param.
-  - `* @param {string} name.query.deprecated` name will be a deprecated query param.
-  - `* @param {string} name.query` name will be a query param.
-- The following option, separated between ` - `, is the description.
+Onde:
+- `@param` é usado para definir um parâmetro.
+- [Tipo](https://swagger.io/specification/#data-types) é definido entre chaves `{}`.
+- Após o tipo, você pode definir a chave que você desejar para o parâmetro.
+- Você pode definir o status do seu parâmetro como estes:
+  - `* @param {string} name.query.required` name será um parâmetro de consulta (query param) obrigatório.
+  - `* @param {string} name.query.deprecated` name será um parâmetro de consulta (query param) depreciado.
+  - `* @param {string} name.query` name será um parâmetro de consulta (query param).
+- A opção seguinte, separada por ` - `, é a descrição.
 
-You can add **enum values** to your parameters like this:
+Você pode adicionar **valores de enum** aos seus parâmetros assim:
 
 ```javascript
 /**
  * GET /api/v1/albums
- * @summary This is the summary or description of the endpoint
- * @param {string} name.query.required - name param description - enum:type1,type2
- * @param {string} license.query - enum:MIT,ISC - name param description
- * @return {object} 200 - success response - application/json
+ * @summary Este é o resumo ou descrição do endpoint
+ * @param {string} name.query.required - descrição do parâmetro name - enum:type1,type2
+ * @param {string} license.query - enum:MIT,ISC - descrição do parâmetro license
+ * @return {object} 200 - resposta de sucesso - application/json
  */
 ```
 
-The last parameter can be used as an enum, or you can switch between enum and description.
+O últimos parâmetro pode ser usado como um enum, ou você pode trocar entre enum e descrição.
 
-The result in swagger UI will be this:
+O resultado na Swagger UI será este:
 
 <img src="./assets/parameters.png"/>
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/parameters).
+> Você pode acessar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/parameters).

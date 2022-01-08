@@ -1,10 +1,10 @@
-# Extend your swagger file
+# Estenda seu arquivo swagger
 
-This option is useful if you have an old project, and you only want to add comments on new endpoints, or you want to add new features that we don't support.
+Esta opção é útil se você tem um projeto antigo/legado, e você só quer adicionar comentários nos novos endpoints, ou quer adicionar novas funcionalidades que nós não suportamos.
 
-## Example
-You could have one `swagger.json` already defined like this one:
-<details><summary>Click to expand</summary>
+## Exemplo
+Você pode ter um arquivo `swagger.json` já definido como este:
+<details><summary>Clique para expandir</summary>
 
 ```js
 {
@@ -206,19 +206,19 @@ You could have one `swagger.json` already defined like this one:
 ```
 </details>
 
-Which renders the next SwaggerUI:
+Que gera o SwaggerUI a seguir:
 
 <img src="./assets/merge.png"/>
 
-If you want to *integrate* your API written with `jsdoc` comments and your `swagger.json`, you can check out this example:
+Se você quer *integrar* sua api escrita com comentários `jsdoc` e seu arquivo `swagger.json`, você pode verificar este exemplo:
 
 ```javascript
 const express = require('express');
-const oldSwagger = require('./swagger.json'); // This file contains the previously mentioned swagger.json
+const oldSwagger = require('./swagger.json'); // este aquivo contém o arquivo swagger.json mencionado anteriormente
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 
 const options = {
-  info: { // version and title are required
+  info: { // propriedades version e title são obrigatórios
     version: '1.0.0',
     title: 'Albums store',
   },
@@ -229,20 +229,20 @@ const options = {
 const app = express();
 const port = 3001;
 
-// To merge swagger.json we had with the new endpoints, It will be passed as a second parameter:
+// Para combinar o aquivo swagger.json que nós tínhamos com os novos, ele será passado com um segundo parâmetro:
 expressJSDocSwagger(app)(options, oldSwagger);
 
-// Example of new endpoint:
+// Exemplo de novo endpoint:
 /**
  * GET /api/v1/albums
- * @summary This is the summary or description of the endpoint
+ * @summary Este é o resumo ou descrição do endpoint
  * @tags Album
- * @param {array<object>} name.query.required - name param description
+ * @param {array<object>} name.query.required - descrição do parâmetro name
  * @return {array<object>} 200 - success response - application/json
  */
 app.get('/api/v1/albums', (req, res) => (
   res.json([{
-    title: 'abum 1',
+    title: 'album 1',
   }])
 ));
 
@@ -250,8 +250,8 @@ app.listen(port, () => console.log(`Example app listening at http://localhost:${
 
 ```
 
-Finally, the result in the SwaggerUI will be the following:
+Finalmente, o resultado no SwaggerUI a seguir:
 
 <img src="./assets/merge-result.png"/>
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/merge).
+> Você pode acessar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/merge).

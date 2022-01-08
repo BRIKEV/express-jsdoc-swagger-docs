@@ -8,19 +8,25 @@
 
 # express-jsdoc-swagger
 
-With this library, you can document your express endpoints using swagger [OpenAPI 3 Specification](https://swagger.io/specification/) without writing YAML or JSON. You can write jsdoc comments on each endpoint, and the library is going to create the swagger UI.
+Com esta biblioteca, você pode documentar seus endpoints usando Swagger [Especificação OpenAPI 3](https://swagger.io/specification/) sem escrever aquivos YAML ou JSON. Você pode escrever comentários jsdoc em cada endpoint, e a biblioteca vai criar a Swagger UI.
 
-## Prerequisites
-This library assumes you are using:
+## Pré Requisitos
+Esta biblioteca assume que você está usando:
 1. [NodeJS](https://nodejs.org)
 2. [Express.js](http://www.expressjs.com)
 
-## Installation
+## Instalação
 ```
 npm i express-jsdoc-swagger
 ```
 
-## Usage
+ou usando yarn
+
+```
+yarn add express-jsdoc-swagger
+```
+
+## Uso
 ```javascript
 const express = require('express');
 const expressJSDocSwagger = require('express-jsdoc-swagger');
@@ -40,21 +46,21 @@ const options = {
     },
   },
   baseDir: __dirname,
-  // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
+  // Padrão para encontrar seus arquivos jsdoc files (múltiplos padrões podem ser adicionados em um array)
   filesPattern: './**/*.js',
-  // URL where SwaggerUI will be rendered
+  // URL onde a SwaggerUI será renderizada
   swaggerUIPath: '/api-docs',
-  // Expose OpenAPI UI
+  // Expõe OpenAPI UI
   exposeSwaggerUI: true,
-  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  // Expõe a documentação Open API JSON Docs no caminho `apiDocsPath`.
   exposeApiDocs: false,
-  // Open API JSON Docs endpoint.
+  // Caminho do Endpoint Open API JSON Docs.
   apiDocsPath: '/v3/api-docs',
-  // Set non-required fields as nullable by default
+  // Define os campos não obrigatórios como nullable por padrão
   notRequiredAsNullable: false,
-  // You can customize your UI options.
-  // you can extend swagger-ui-express config. You can checkout an example of this
-  // in the `example/configuration/swaggerOptions.js`
+  // Você pode customizar suas opções de UI.
+  // Você pode estender a configuração do swagger-ui-express. Você pode ver um exemplo destes
+  // no `example/configuration/swaggerOptions.js`
   swaggerUiOptions: {},
 };
 
@@ -94,22 +100,20 @@ const options = {
     },
   },
   baseDir: __dirname,
-  // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
-  filesPattern: './**/*.js',
-  // URL where SwaggerUI will be rendered
+  // URL onde a SwaggerUI será renderizado
   swaggerUIPath: '/api-docs',
-  // Expose OpenAPI UI
+  // Expõe OpenAPI UI
   exposeSwaggerUI: true,
-  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  // Expõe a documentação Open API JSON Docs no caminho `apiDocsPath`.
   exposeApiDocs: false,
-  // Open API JSON Docs endpoint.
+  // Caminho do Endpoint Open API JSON Docs.
   apiDocsPath: '/v3/api-docs',
-  // Set non-required fields as nullable by default
+  // Define os campos não obrigatórios como nullable por padrão
   notRequiredAsNullable: false,
 };
 ```
 
-2. Components definition
+2. Definição de componentes
 
 ```javascript
 /**
@@ -121,7 +125,7 @@ const options = {
  */
 ```
 
-3. Endpoint that returns a `Songs` model array
+3. Endpoint que retorna um modelo de array de `Songs`
 
 ```javascript
 /**
@@ -132,7 +136,7 @@ const options = {
  */
 app.get('/api/v1/albums', (req, res) => (
   res.json([{
-    title: 'abum 1',
+    title: 'album 1',
   }])
 ));
 ```
@@ -151,7 +155,7 @@ app.get('/api/v1/albums', (req, res) => (
  */
 app.get('/api/v1/album', (req, res) => (
   res.json({
-    title: 'abum 1',
+    title: 'album 1',
   })
 ));
 ```
