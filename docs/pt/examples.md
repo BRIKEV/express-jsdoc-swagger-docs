@@ -39,45 +39,45 @@ app.post('/api/v1/song', (req, res) =>
 );
 ```
 
-O resultado no Swagger UI será assim:
+O resultado na Swagger UI será assim:
 
 <img src="./assets/examples.png"/>
 
-> You can find more working examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/withExamples.js) or [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/responses/withExamples.js).
+> Você pode encontrar mais exemplos funcionais [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/withExamples.js) ou [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/responses/withExamples.js).
 
-## Usage instructions
+## Instruções de Uso
 
-The `@example` annotation must be immediatly be followed by a keyword that will represent what our example will be illustrating: `request` or `response`.
+A anotação `@example` deve ser seguida imediatamente por uma palavra chave que vai representar o que nosso exemplo vai ilustrar: `request` ou `response`.
 
-> It's possible to add as many examples as required for both requests and responses in a single endpoint, there's no limit on that. In the case of responses, multiple examples for the same status code are also supported (so we can provide different examples of what our API will return if it succeeds, for example).
+> É possível adicionar quantos exemplos forem necessários para ambas requisições e respostas em um único endpoint, nõ há limite para isso. No caso das respostas, múltiplos exemplos para o mesmo status code também são suportados (então nós podemos fornecer diferentes exemplos do que a nossa API vai retornar em caso de sucesso, por exemplo).
 
-The sections below describe in more in detail the expected syntax for the `@example` tag in each case (request and responses). Although it's same for the most part, it will differ slightly depending on the keyword used.
+As sessões abaixo descrevem em mais detalhes a sintaxe esperada para a tag `@example` em cada caso (requisição e resposta). Embora seja o mesmo na maioria das vezes, haverão pequenas diferenças dependendo da palavra chave utilizada.
 
-### Request body example
+### Exemplo de Corpo da Requisição
 
 ```
 @example request - [summary]
 [content]
 ```
 
-| Field   | Description                                                                                                                                                                                                                                                                                   |
+| Campo    | Descrição                                                                                                                                                                                                                                                                                     |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Summary | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and _NOT_ the summary.                                                                                       |
-| Content | Example content for the request body. It's imperative that its contents start at a new line below the `@example` tag, and not in the same one. The content can be split into multiple lines if necessary, for better readibility. Indentation and breaklines will be preserved in Swagger UI. |
+| Summary | Pequeno texto que descreve brevemente o exemplo. Este texto deve ocupar apenas uma única linha. Tudo fora da linha da tab `@example` será considerado para do conteúdo do exemplo e _NÃO_ para o resumo.                                                                                       |
+| Content | Exemplo do conteúdo do corpo da requisição. É obrigatório que seu conteúdo comece uma nov alinha abaixo da tag `@example`, e não na mesma linha. O conteúdo pode ser conter várias linhas se necessário, para melhor leitura. Indentação e quebras de linhas serão mantidos na Swagger UI. |
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/withExamples.js).
+> Você pode acessar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/withExamples.js).
 
-### Response body example
+### Exemplo de Corpo da Resposta
 
 ```
 @example response - [status code] - [summary]
 [content]
 ```
 
-| Field       | Description                                                                                                                                                                                                                                                                                                                                |
+| Campo        | Descrição                                                                                                                                                                                                                                                                                                                                   |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Status code | An HTTP status code (ex.: `200`). Keep in mind that any code not available in [validStatusCodes](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/transforms/paths/validStatusCodes.js) will be ignored. Also, it's necessary for a `@return` tag to exist for that same code in order for the example to appear in Swagger UI. |
-| Summary     | Small text that briefly describes the example. This text must occupy a single line. Everything outside of the `@example` tag line will be considered part of the example content and _NOT_ the summary.                                                                                                                                    |
-| Content     | Example content for the response body. It's imperative that its contents start at a new line below the `@example` tag, and not in the same one. The content can be split into multiple lines if necessary, for better readibility. Indentation and breaklines will be preserved in Swagger UI.                                             |
+| Status code | Um código de status An HTTP (ex.: `200`). tenha em mente que qualquer código nos [códigos de status válidos](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/transforms/paths/validStatusCodes.js) serão ignorados. Também, é necessário que haja uma tag `@return` para o mesmo código afim do exemplo aparecer na Swagger UI. |
+| Summary     | Pequeno texto que descreve brevemente o exemplo. Este texto deve ocupar apenas uma única linha. Tudo fora da linha da tab `@example` será considerado para do conteúdo do exemplo e _NÃO_ para o resumo.                                                                                                                                    |
+| Content     | Exemplo do conteúdo do corpo da requisição. É obrigatório que seu conteúdo comece uma nov alinha abaixo da tag `@example`, e não na mesma linha. O conteúdo pode ser conter várias linhas se necessário, para melhor leitura. Indentação e quebras de linhas serão mantidos na Swagger UI.                                             |
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/responses/withExamples.js).
+> Você pode acessar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/responses/withExamples.js).
