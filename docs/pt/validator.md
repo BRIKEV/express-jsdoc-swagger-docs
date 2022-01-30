@@ -1,16 +1,22 @@
 # express-oas-validator
 
-You can add validation to your request params, headers, body and response with [express-oas-validator](https://github.com/BRIKEV/express-oas-validator) a simple module that export some validation methods and an express middleware to unify the validation with the Documentation you provide for your API.
+Você pode adicionar validação aos seus parâmetros de requisição, cabeçalhos, corpo e resposta com [express-oas-validator](https://github.com/BRIKEV/express-oas-validator) um módulo simples que expota alguns métodos de validação e um middleware express para unificar a validação com a Documentação que vocẽ fornece para sua API.
 
-## Quick start
+## Início rápido
 
-Install using the node package registry:
+Instale usando o gerenciador de pacotes node:
 
 ```
 npm install --save express-oas-validator
 ```
 
-After this you have to initialize using the `finish` event. More info in this [sections](eventEmitter.md).
+ou yarn:
+
+```
+yarn add express-oas-validator
+```
+
+Após isso, você deve inicializar usando o evento `finish`. Para mais informações, veja esta [sessão](/pt/eventEmitter.md).
 
 ```js
 const instance = expressJSDocSwagger(app)(options);
@@ -21,7 +27,7 @@ instance.on('finish', data => {
 });
 ```
 
-This is a full example on how it works.
+este é um exemplo completo de como funciona.
 
 ```js
 const express = require('express');
@@ -53,30 +59,30 @@ const serverApp = () => new Promise(resolve => {
   app.use(express.json());
 
   /**
-   * A song
-   * @typedef {object} Song
-   * @property {string} title.required - The title
-   * @property {string} artist - The artist
-   * @property {integer} year - The year
+   * Uma música
+   * @typedef {object} Musica
+   * @property {string} titulo.required - O título
+   * @property {string} artista - O artista
+   * @property {integer} ano - O ano
    */
 
   /**
    * POST /api/v1/songs
-   * @param {Song} request.body.required - song info
-   * @return {object} 200 - song response
+   * @param {Song} request.body.required - infomrações da música
+   * @return {object} 200 - resposta de música
    */
-  app.post('/api/v1/songs', validateRequest(), (req, res) => res.send('You save a song!'));
+  app.post('/api/v1/songs', validateRequest(), (req, res) => res.send('Você salvou uma música!'));
 
   /**
    * POST /api/v1/name
-   * @param {string} request.body.required - name body description
-   * @return {object} 200 - song response
+   * @param {string} request.body.required - descrição do corpo da requisição
+   * @return {object} 200 - resposta de música
    */
   app.post('/api/v1/name', (req, res, next) => {
     try {
-      // Validate response
-      validateResponse('Error string', req);
-      return res.send('Hello World!');
+      // Valida a resposta
+      validateResponse('Mensagem de erro', req);
+      return res.send('Olá Mundo!');
     } catch (error) {
       return next(error);
     }
@@ -84,14 +90,14 @@ const serverApp = () => new Promise(resolve => {
 
   /**
    * GET /api/v1/authors
-   * @summary This is the summary or description of the endpoint
-   * @param {string} name.query.required - name param description - enum:type1,type2
-   * @param {array<string>} license.query - name param description
-   * @return {object} 200 - success response - application/json
+   * @summary este é o resumo ou descrição do endpoint
+   * @param {string} nome.query.required - descrição do parâmetro nome - enum:tipo1,tipo2
+   * @param {array<string>} licenca.query - descrição do parâmetro licença
+   * @return {object} 200 - resposta de sucesso - application/json
    */
   app.get('/api/v1/authors', validateRequest({ headers: false }), (req, res) => (
     res.json([{
-      title: 'abum 1',
+      titulo: 'abum 1',
     }])
   ));
 
@@ -104,18 +110,18 @@ const serverApp = () => new Promise(resolve => {
 module.exports = serverApp;
 ```
 
-## express-oas-validator methods
+## métodos do express-oas-validator
 
 ### init(openApiDef, options)
 
-This methods initiates the validator so that `validateRequest` and `validateResponse` can be used in different files.
+Este método inicializa o validador então os métodos `validateRequest` e `validateResponse` podem ser usados em arquivos diferentes.
 
-**Parameters**
+**Parâmetros**
 
-| Name        | Type   | Description        |
+| Nome        | Tipo   | Descrição          |
 | ------------|:------:| ------------------:|
-| openApiDef  | object | OpenAPI definition |
-| options     | object | Options to extend the errorHandler or Ajv configuration |
+| openApiDef  | object | Definição OpenAPI  |
+| options     | object | Opções para extender o gerenciador de erros (errorHandler) ou qualquer configuração |
 
 ```js
 const swaggerDefinition = require('./swaggerDefinition.json');
@@ -127,7 +133,7 @@ init(swaggerDefinition);
 ## validateRequest(endpointConfig)
 
 
-Express middleware that receives this configuration options and validates each of the options.
+Middleware Express que recebe estas opções de configuração e valida cada uma das opções.
 
 ```js
 const DEFAULT_CONFIG = {
@@ -140,38 +146,38 @@ const DEFAULT_CONFIG = {
 };
 ```
 
-**Example**
+**Exemplo**
 
 ```js
-// This one uses the DEFAULT_CONFIG
+// Este usa a DEFAULT_CONFIG
 app.get('/api/v1/albums/:id', validateRequest(), (req, res) => (
   res.json([{
-    title: 'abum 1',
+    titulo: 'abum 1',
   }])
 ));
 
-// With custom configuration
+// Com configuração personalizada
 app.get('/api/v1/albums/:id', validateRequest({ headers: false }), (req, res) => (
   res.json([{
-    title: 'abum 1',
+    titulo: 'abum 1',
   }])
 ));
 ```
 
 ## validateResponse(payload, req, status)
 
-Method to validate response payload based on the docs and the status we want to validate.
+Método para validar os dados da resposta baseado na documentação e status que queremos validar.
 
-**Parameters**
+**Parâmetros**
 
-| Name        | Type   | Description        |
+| Nome        | Tipo   | Descrição          |
 | ------------|:------:| ------------------:|
-| payload     | *      | response we want to validate |
-| req         | object | Options to extend the errorHandler or Ajv configuration |
-| status      | number | esponse status we want to validate |
+| payload     | *      | resposta que queremos validar |
+| req         | object | Opções para extender o gerenciador de erros (errorHandler) ou qualquer configuração |
+| status      | number | status de resposta que queremos validar |
 
 
-**Example**
+**Exemplo**
 
 ```js
 validateResponse('Error string', req, 200);

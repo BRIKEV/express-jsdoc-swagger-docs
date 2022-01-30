@@ -1,5 +1,5 @@
-# Request body
-To add a [body payload](https://swagger.io/docs/specification/describing-request-body/) to your endpoints with express-jsdoc-swagger, you could add these comments:
+# Corpo da requisição
+Para adicionar [informações do corpo](https://swagger.io/docs/specification/describing-request-body/) para seus endpoins com express-jsdoc-swagger, você pode adicionar estes comentários:
 
 ```javascript
 /**
@@ -9,14 +9,14 @@ To add a [body payload](https://swagger.io/docs/specification/describing-request
 app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 ```
 
-Where:
-- `@param` is used to define one parameter.
-- [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define the key **request.body**. This key must have that value if you want this as a body payload.
-- The following option, separated between ` - `, is the description.
-- The last option of the keyword `@param` *(application/json)* specify the request media type. This is optional and its default value is *application/json*.
+Onde:
+- `@param` é usado para definir um parâmetro.
+- [Tipo](https://swagger.io/specification/#data-types) é deifinido entre `{}`.
+- Após o tipo, vocẽ deve definir uma chave **request.body**. esta chave deve ter um valor que você quer como informação do corpo.
+- A opção seguinte, separado entre ` - `, é a descrição.
+- A última opção da palavra chave `@param` *(application/json)* especifica o tipo de mídia. Este é opcional e seu valor padrão é *application/json*.
 
-You can mix this with [components](components.md) to define a payload based on a component like in this example:
+Você pode combinar isto com [componentes](components.md) para definir as informações baseado no componente como neste exemplo:
 
 ```javascript
 /**
@@ -42,7 +42,7 @@ app.post('/api/v1/songs', (req, res) => res.send('You save a song!'));
 app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 ````
 
-Or you can add form-data requests to upload files:
+Ou você pode adicionar requisições de dados de formulário para upload de arquivos:
 
 ```javascript
 /**
@@ -62,21 +62,21 @@ Or you can add form-data requests to upload files:
 app.post('/api/v1/album', (req, res) => res.send('You save a song!'));
 ```
 
-In that example, we use the last option of the keyword `@param` to specify the request media type as multipart/form-data.
+Neste exemplo, nos usamos a última opção da palavra chave `@param` para especificar o tipo de mídia da requisição como multipart/form-data.
 
-The result in swagger UI will be this:
+Na Swagger UI o resultado será assim:
 
 <img src="./assets/request-body.png"/>
 
-> To learn how to add examples of your endpoint's payload, check out the [examples](examples.md) section.
+> Para aprender como adicionar exemplos das informações dos seus endpoints, veja a sessão de [exemplos](/pt/examples.md).
 
-> To learn how define components schemas, please visit [components](components.md) section.
+> Para aprender como definir esquemas de componentes, por favor visite a sessão de [componentes](/pt/components.md).
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/requestBody).
+> Você pode encontrar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/requestBody).
 
-### Body as form parameter
+### Corpo como um parâmetro de formulário
 
-You can send some body parameters without using a component. To do that you could add these comments:
+Você pode enviar parâmetros de corpo sem usar um componente. Para fazer isso você pode adicionar estes comentários:
 
 ```javascript
 /**
@@ -88,13 +88,13 @@ You can send some body parameters without using a component. To do that you coul
 app.post('/api/v1/songs', (req, res) => res.json({}));
 ```
 
-Where:
-- `@param` is used to define one parameter.
-- [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define the key you want for the parameter followed by **form** value.
-- The following option, separated between ` - `, is the description.
-- The last option of the keyword `@param` *(application/json)* specify the request media type. This is optional and its default value is *application/json*.
+Onde:
+- `@param` é usado para definir um parâmetro.
+- [Tipo](https://swagger.io/specification/#data-types) é definido entre `{}`.
+- Após o tipo, você deve definir a chave que você deseja para o parâmetro seguido do valor **form**.
+- A opção seguinte, separado entre ` - `, é a descrição.
+- a última opção de palavra chave `@param` é *(application/json)* que especifica o tipo de mídia. Este valor é opcional e seu valor padrão é *application/json*.
 
-**IMPORTANT:** To use form params it is neccesary to provide a description for each field
+**IMPORTANTE:** Para usar os parâmetros de formulário é necessário fornecer uma descrição para cada campo.
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/formParameters.js).
+> Você pode encontrar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/requestBody/formParameters.js).

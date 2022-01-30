@@ -1,5 +1,5 @@
-# Security
-To add [Authentication](https://swagger.io/docs/specification/authentication/) to your endpoints with express-jsdoc-swagger, you have to add your security schemas to the config object when you create your instance:
+# Segurança
+Para adicionar [Autenticação](https://swagger.io/docs/specification/authentication/) nos seus endpoints com express-jsdoc-swagger, você deve adicionar seus esquemas de segurança ao objeto de configuração quando você cria a sua instância:
 
 ```javascript
 const express = require('express');
@@ -29,27 +29,27 @@ const port = 3000;
 expressJSDocSwagger(app)(options);
 ```
 
-- `Security` key is used to define your security schemas, and it is optional in case you don't want any type of security.
+- A chave `security` é usada para definir seus esquemas de segurança, e é opcional caso você quiser nenhum tipo de segurança.
 
-After you add your security schemas, you can use them in your endpoints like this:
+Após você adicionar seus esquemas de segurança, você pode usá-los em seus endpoints assim:
 
 ```javascript
 /**
  * GET /api/v1
- * @summary This is the summary or description of the endpoint
- * @return {string} 200 - success response
+ * @summary Este é o resumo ou descrição do seu endpoint
+ * @return {string} 200 - resposta de sucesso
  * @security BasicAuth
  */
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 ```
 
-The result in swagger UI will be this:
+O resultado na swagger UI será assim:
 
 <img src="./assets/security.png"/>
 
-## Multiple Authentication types
+## Múltiplos tipos de Autenticação
 
-You can use multiple authentication types and combine the security requirements using logical OR (`|`) and AND (`&`) to achieve the desired result.
+Você pode usar múltiplos tipos de autenticação e combinar os requisitos de segurança usando lógica OU (`|`) e E (`&`) para atingir o resultado desejado.
 
 ```javascript
 const options = {
@@ -76,20 +76,19 @@ const options = {
 
 /**
  * GET /api/v2
- * @summary Endpoint with multiple security configuration (AND logic)
- * @return {string} 200 - success response
+ * @summary Endpoint com múltiplas configurações de segurança (lógica E)
+ * @return {string} 200 - resposta de sucesso
  * @security BasicAuth & BearerAuth
  */
 app.get('/api/v2', (req, res) => res.send('Hello World!'));
 
 /**
  * GET /api/v3
- * @summary Endpoint with multiple security configuration (OR logic)
- * @return {string} 200 - success response
+ * @summary Endpoint com múltiplas configurações de segurança (lógica OU)
+ * @return {string} 200 - resposta de sucesso
  * @security BasicAuth | BearerAuth
  */
 app.get('/api/v3', (req, res) => res.send('Hello World!'));
 ```
 
-
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/security/basic-auth.js).
+> Você pode acessar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/blob/master/examples/security/basic-auth.js).
