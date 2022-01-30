@@ -71,8 +71,8 @@ expressJSDocSwagger(app)(options);
 
 /**
  * GET /api/v1
- * @summary This is the summary of the endpoint
- * @return {object} 200 - success response
+ * @summary Este é o resumo do endpoint
+ * @return {object} 200 - resposta de sucesso
  */
 app.get('/api/v1', (req, res) => res.json({
   success: true,
@@ -81,8 +81,8 @@ app.get('/api/v1', (req, res) => res.json({
 app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));
 ```
 
-## Examples
-1. Basic configuration
+## Exemplos
+1. Configuração Básica
 
 ```javascript
 const options = {
@@ -117,63 +117,63 @@ const options = {
 
 ```javascript
 /**
- * A song type
- * @typedef {object} Song
- * @property {string} title.required - The title
- * @property {string} artist - The artist
- * @property {number} year - The year - double
+ * Um tipo de música
+ * @typedef {object} Musica
+ * @property {string} titulo.required - O título
+ * @property {string} artista - O artista
+ * @property {number} ano - O ano - double
  */
 ```
 
-3. Endpoint que retorna um modelo de array de `Songs`
+3. Endpoint que retorna um modelo de array de `Musicas`
 
 ```javascript
 /**
  * GET /api/v1/albums
- * @summary This is the summary of the endpoint
+ * @summary Este é o resumo do endpoint
  * @tags album
- * @return {array<Song>} 200 - success response - application/json
+ * @return {array<Musica>} 200 - resposta de sucesso - application/json
  */
 app.get('/api/v1/albums', (req, res) => (
   res.json([{
-    title: 'album 1',
+    titulo: 'album 1',
   }])
 ));
 ```
 
-4. Basic endpoint definition with tags, params and basic authentication
+1. Definição de endpoint básico com tags, parâmetros e autenticação básica
 
 ```javascript
 /**
  * GET /api/v1/album
- * @summary This is the summary of the endpoint
+ * @summary Este é o resumo do endpoint
  * @security BasicAuth
  * @tags album
- * @param {string} name.query.required - name param description
- * @return {object} 200 - success response - application/json
- * @return {object} 400 - Bad request response
+ * @param {string} nome.query.required - descrição do parâmetro name
+ * @return {object} 200 - resposta de sucesso - application/json
+ * @return {object} 400 - resposta Bad request
  */
 app.get('/api/v1/album', (req, res) => (
   res.json({
-    title: 'album 1',
+    titulo: 'album 1',
   })
 ));
 ```
 
-5. Basic endpoint definition with code example for response body
+1. Definição de endpoint básico código de exemplo para o corpo da resposta
 
 ```javascript
 /**
  * GET /api/v1/albums
- * @summary This is the summary of the endpoint
+ * @summary Este é o resumo do endpoint
  * @tags album
- * @return {array<Song>} 200 - success response - application/json
- * @example response - 200 - success response example
+ * @return {array<Music>} 200 - resposta de sucesso - application/json
+ * @example response - 200 - exemplo de resposta de sucesso
  * [
  *   {
- *     "title": "Bury the light",
- *     "artist": "Casey Edwards ft. Victor Borba",
- *     "year": 2020
+ *     "titulo": "Bury the light",
+ *     "artista": "Casey Edwards ft. Victor Borba",
+ *     "ano": 2020
  *   }
  * ]
  */
@@ -184,21 +184,27 @@ app.get('/api/v1/albums', (req, res) => (
 ));
 ```
 
-You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples).
+Você pode encontrar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples).
 
-## Validator
+## Validador
 
-We developed a new package that works as a validator of your API endpoints with the documentation you create with `express-jsdoc-swagger`. This package is [express-oas-validator](https://github.com/BRIKEV/express-oas-validator).
+Nós desenvolvemos um novo pacote que funciona como um validador dos endpoints da sua API com a documentação que você cria com `express-jsdoc-swagger`. este pacote é [express-oas-validator](https://github.com/BRIKEV/express-oas-validator).
 
-**Example**
+**Exemplo**
 
-Install using the node package registry:
+Instale usando o registro de pacote node:
 
 ```
 npm install --save express-oas-validator
 ```
 
-After this you have to initialize using the `finish` event. More info in this [sections](eventEmitter.md).
+Ou usando yarn:
+
+```
+yarn add express-oas-validator
+```
+
+Após isso você deve inicializar usando o evento `finish`. Mais informações nestas [sessões](eventEmitter.md).
 
 ```js
 const instance = expressJSDocSwagger(app)(options);
@@ -209,7 +215,7 @@ instance.on('finish', data => {
 });
 ```
 
-This is a full example of how it works.
+Este é o exemplo completo de como ele funciona.
 
 ```js
 const express = require('express');
@@ -241,28 +247,28 @@ const serverApp = () => new Promise(resolve => {
   app.use(express.json());
 
   /**
-   * A song
-   * @typedef {object} Song
-   * @property {string} title.required - The title
-   * @property {string} artist - The artist
-   * @property {integer} year - The year
+   * Uma música
+   * @typedef {object} Musica
+   * @property {string} titulo.required - O título
+   * @property {string} artista - O artista
+   * @property {integer} ano - O ano
    */
 
   /**
    * POST /api/v1/songs
-   * @param {Song} request.body.required - song info
-   * @return {object} 200 - song response
+   * @param {Musica} request.body.required - informações da música
+   * @return {object} 200 - resposta da música
    */
-  app.post('/api/v1/songs', validateRequest(), (req, res) => res.send('You save a song!'));
+  app.post('/api/v1/songs', validateRequest(), (req, res) => res.send('Você tem uma música!'));
 
   /**
    * POST /api/v1/name
-   * @param {string} request.body.required - name body description
-   * @return {object} 200 - song response
+   * @param {string} request.body.required - descrição do corpo nome
+   * @return {object} 200 - resposta da música
    */
   app.post('/api/v1/name', (req, res, next) => {
     try {
-      // Validate response
+      // Valida a resposta
       validateResponse('Error string', req);
       return res.send('Hello World!');
     } catch (error) {
@@ -272,14 +278,14 @@ const serverApp = () => new Promise(resolve => {
 
   /**
    * GET /api/v1/authors
-   * @summary This is the summary or description of the endpoint
-   * @param {string} name.query.required - name param description - enum:type1,type2
-   * @param {array<string>} license.query - name param description
-   * @return {object} 200 - success response - application/json
+   * @summary este é o resumo ou descrição do endpoint
+   * @param {string} nome.query.required - descrição do parâmetro nome - enum:type1,type2
+   * @param {array<string>} licenca.query - descrição do parâmetro licença
+   * @return {object} 200 - resposta de sucesso - application/json
    */
   app.get('/api/v1/authors', validateRequest({ headers: false }), (req, res) => (
     res.json([{
-      title: 'abum 1',
+      titulo: 'album 1',
     }])
   ));
 
@@ -292,7 +298,7 @@ const serverApp = () => new Promise(resolve => {
 module.exports = serverApp;
 ```
 
-## Contributors ✨
+## Contribuintes ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -321,4 +327,4 @@ module.exports = serverApp;
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Este projeto segue a especificação [all-contributors](https://github.com/all-contributors/all-contributors). Contribuições de todo tipo são bem vindas!

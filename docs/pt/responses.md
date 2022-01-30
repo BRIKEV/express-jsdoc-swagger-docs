@@ -1,31 +1,31 @@
-# Responses
-To add [responses](https://swagger.io/docs/specification/describing-responses/) to your endpoints with express-jsdoc-swagger, you could add these comments:
+# Respostas
+Para adicionar [respostas](https://swagger.io/docs/specification/describing-responses/) aos seus endpoints com express-jsdoc-swagger, você pode adicionar estes comentários:
 
 ```javascript
 /**
  * GET /api/v1
- * @summary This is the summary or description of the endpoint
- * @return {string} 200 - success response
- * @return {object} 400 - Bad request response
+ * @summary Este é o resumo ou descrição do endpoint
+ * @return {string} 200 - resposta de sucesso
+ * @return {object} 400 - resposta de má requisição (Bad request)
  */
 app.get('/api/v1', (req, res) => res.send('Hello World!'));
 ```
 
 Where:
-- `@summary` is the endpoint description.
-- `@return` is used to define the response.
-- [Type](https://swagger.io/specification/#data-types) is defined between `{}`.
-- After the type, you have to define the HTTP status code.
-- The following option, separated between ` - `, is the description.
+- `@summary` é adescrição do endpoint.
+- `@return` é usado para definir a resposta.
+- [Tipo](https://swagger.io/specification/#data-types) está definido entre `{}`.
+- Após o tipo, você deve definir o código de status HTTP.
+- A opção seguinte, separada entre ` - `, é a descrição.
 
-You can mark specific operations as deprecated with `@deprecated` keyword:
+Você pode marcar operações específicas como depreciadas com a palavra chave`@deprecated`:
 ```javascript
 /**
  * GET /api/v1/album
- * @summary This is the summary or description of the endpoint
+ * @summary Este é o resumo ou descrição do endpoint
  * @deprecated
- * @return {object} 200 - success response
- * @return {object} 400 - Bad request response
+ * @return {string} 200 - resposta de sucesso
+ * @return {object} 400 - resposta de má requisição (Bad request)
  */
 app.get('/api/v1/album', (req, res) => (
   res.json({
@@ -33,19 +33,19 @@ app.get('/api/v1/album', (req, res) => (
   })
 ));
 ```
-This looks like:
+Fica assim:
 
 <img src="./assets/deprecated.png"/>
 
-Also you can assign a list of tags to each API operation:
+Você também pode definir uma lista de tags para cada operação da API:
 ```javascript
 /**
  * GET /api/v2/album
- * @summary This is the summary or description of the endpoint
+ * @summary Este é o resumo ou descrição do endpoint
  * @tags album
  * @security BasicAuth
- * @return {object} 200 - success response
- * @return {object} 400 - Bad request response
+ * @return {string} 200 - resposta de sucesso
+ * @return {object} 400 - resposta de má requisição (Bad request)
  */
 app.get('/api/v2/album', (req, res) => (
   res.json({
@@ -53,15 +53,15 @@ app.get('/api/v2/album', (req, res) => (
   })
 ));
 ```
-> If you want to know more about `@tags`, please visit [tags](tags.md) section.
+> Se você quiser saber mais sobre `@tags`, por favor visite a sessão de [tags](/pt/tags.md).
 
-You can return a common schema:
+Você pode retornar um esquema comum:
 ```javascript
 /**
  * GET /api/v1/albums
- * @summary This is the summary or description of the endpoint
+ * @summary Este é o resumo ou descrição do endpoint
  * @tags album
- * @return {array<Song>} 200 - success response - application/json
+ * @return {array<Song>} 200 - resposta de sucesso - application/json
  */
 app.get('/api/v1/albums', (req, res) => (
   res.json([{
@@ -69,16 +69,16 @@ app.get('/api/v1/albums', (req, res) => (
   }])
 ));
 ```
-In this case:
-- The endpoint returns a Song array.
-- The last option of the keyword `@return` *(application/json)* specify the response media types. This is optional and its default value is *application/json*.
+Neste caso:
+- O endpoint retorna um array de Song.
+- A última opção da palavra chave `@return` *(application/json)* especifica o tipo de mídia da resposta. Este é opção e seu valor padrão é *application/json*.
 
-The result in swagger UI will be this:
+O resultado na swagger UI será este:
 
 <img src="./assets/response-component.png"/>
 
-> To learn how to add examples of your endpoint's output, check out the [examples](examples.md) section.
+> Para aprender como adicionar exemplos da saída do seu endpoint, veja a sessão de [exemplos](/pt/examples.md).
 
-> To learn how define components schemas, please visit [components](components.md) section.
+> Para aprender como definir esquemas de componentes, por favor visite a sessão de [componentes](/pt/components.md).
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/responses).
+> Você pode ver mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/responses).

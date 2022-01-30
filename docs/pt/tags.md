@@ -1,16 +1,16 @@
-# Tags
-You can assign a list of [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to each API operation.
+# Etiquetas
+Você pode associar uma lista de [etiquetas](https://swagger.io/docs/specification/grouping-operations-with-tags/) para cada operação da API.
 
-To define a tag with express-jsdoc-swagger:
+Para definir uma etiqueta com express-jsdoc-swagger:
 ```javascript
 /**
  * GET /api/v1/album
- * @tags Album - everything about album
+ * @tags Album - tudo sobre álbum
  */
 ```
-Where:
-- The keyword `@tags` is used to assign to the endpoint.
-- The following option, separated between ` - `, is the description.
+Onde:
+- A palavra chave `@tags` é usada para associar etiquetas ao endepoint.
+- a opção seguinte, separada entre ` - `, é a descrição.
 
 Furthermore, the same tag can be assigned to several endpoints:
 ```javascript
@@ -20,9 +20,9 @@ Furthermore, the same tag can be assigned to several endpoints:
  * @tags Songs - everything about songs
  */
 ```
-In this case, `Album` and `Song` tags have been assigned to the songs' endpoint, and the result in swagger UI will be this:
+Neste caso, as etiquetas `Album` e `Song` foram associadas ao endepoint de músicas (Songs), e o resultado na swagger UI será este:
 
 <img src="./assets/tags.png"/>
 
-> You can check out more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/tags).
+> Você pode acessar mais exemplos [aqui](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples/tags).
 
