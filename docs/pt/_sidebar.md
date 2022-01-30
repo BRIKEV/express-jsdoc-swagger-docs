@@ -1,9 +1,9 @@
 - Começando
 
   - [Introdução](/pt/README.md)
-  - [Configuração](/pt/configuration.md?id=configuration)
-    - [Opções](/pt/configuration.md?id=configuration)
-    - [Exemplo](/pt/configuration.md?id=full-example)
+  - [Configuração](/pt/configuration.md?id=configuração)
+    - [Opções](/pt/configuration.md?id=configuração)
+    - [Exemplo](/pt/configuration.md?id=exemplo-completo)
   - [Esquemas / Componentes](/pt/components.md)
   - [Endpoints](/pt/responses.md)
     - [Respostas](/pt/responses.md)

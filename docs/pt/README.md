@@ -204,7 +204,7 @@ Ou usando yarn:
 yarn add express-oas-validator
 ```
 
-Após isso você deve inicializar usando o evento `finish`. Mais informações nestas [sessões](eventEmitter.md).
+Após isso você deve inicializar usando o evento `finish`. Mais informações nestas [sessões](/pt/eventEmitter.md).
 
 ```js
 const instance = expressJSDocSwagger(app)(options);
