@@ -8,19 +8,34 @@
 
 # express-jsdoc-swagger
 
-With this library, you can document your express endpoints using swagger [OpenAPI 3 Specification](https://swagger.io/specification/) without writing YAML or JSON. You can write jsdoc comments on each endpoint, and the library is going to create the swagger UI.
+With this library, you can document your express endpoints using swagger [OpenAPI 3 Specification](https://swagger.io/specification/) without writing YAML or JSON. You can write comments similar to `jsdoc` on each endpoint, and the dependecy is going to create the swagger UI.
+
+## Table of Contents
+
+1. [Prerequisites](#Prerequisites)
+2. [Installation](#Installation)
+3. [Basic Usage](#Basic-Usage)
+4. [Basic Examples](#Basic-Examples)
+	- [Advanced examples](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples)
+	- [Official docs](https://brikev.github.io/express-jsdoc-swagger-docs/#/)
+5. [Validator](#Validator)
+6. [VSCode extension](https://marketplace.visualstudio.com/items?itemName=brikev.express-jsdoc-swagger-snippets)
 
 ## Prerequisites
+
 This library assumes you are using:
+
 1. [NodeJS](https://nodejs.org)
 2. [Express.js](http://www.expressjs.com)
 
 ## Installation
+
 ```
 npm i express-jsdoc-swagger
 ```
 
-## Usage
+## Basic Usage
+
 ```javascript
 const express = require('express');
 const expressJSDocSwagger = require('express-jsdoc-swagger');
@@ -56,6 +71,8 @@ const options = {
   // you can extend swagger-ui-express config. You can checkout an example of this
   // in the `example/configuration/swaggerOptions.js`
   swaggerUiOptions: {},
+  // multiple option in case you want more that one instance
+  multiple: true,
 };
 
 const app = express();
@@ -75,7 +92,8 @@ app.get('/api/v1', (req, res) => res.json({
 app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));
 ```
 
-## Examples
+## Basic Examples
+
 1. Basic configuration
 
 ```javascript
@@ -96,16 +114,6 @@ const options = {
   baseDir: __dirname,
   // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
   filesPattern: './**/*.js',
-  // URL where SwaggerUI will be rendered
-  swaggerUIPath: '/api-docs',
-  // Expose OpenAPI UI
-  exposeSwaggerUI: true,
-  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
-  exposeApiDocs: false,
-  // Open API JSON Docs endpoint.
-  apiDocsPath: '/v3/api-docs',
-  // Set non-required fields as nullable by default
-  notRequiredAsNullable: false,
 };
 ```
 
@@ -180,11 +188,12 @@ app.get('/api/v1/albums', (req, res) => (
 ));
 ```
 
-You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples).
+You can find more examples [here](https://github.com/BRIKEV/express-jsdoc-swagger/tree/master/examples), or visit our [documentation](https://brikev.github.io/express-jsdoc-swagger-docs/#/).
+
 
 ## Validator
 
-We developed a new package that works as a validator of your API endpoints with the documentation you create with `express-jsdoc-swagger`. This package is [express-oas-validator](https://github.com/BRIKEV/express-oas-validator).
+We developed a new package works as a validator of your API endpoints and the documentation you create with this package. This package is [express-oas-validator](https://github.com/BRIKEV/express-oas-validator).
 
 **Example**
 
@@ -275,7 +284,7 @@ const serverApp = () => new Promise(resolve => {
    */
   app.get('/api/v1/authors', validateRequest({ headers: false }), (req, res) => (
     res.json([{
-      title: 'abum 1',
+      title: 'album 1',
     }])
   ));
 
@@ -287,6 +296,8 @@ const serverApp = () => new Promise(resolve => {
 
 module.exports = serverApp;
 ```
+
+You can visit our [documentation](https://brikev.github.io/express-jsdoc-swagger-docs/#/validator).
 
 ## Contributors ✨
 
@@ -309,6 +320,13 @@ module.exports = serverApp;
     <td align="center"><a href="https://me.io"><img src="https://avatars.githubusercontent.com/u/45731?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohamed Meabed</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=meabed" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ofarukaydin"><img src="https://avatars.githubusercontent.com/u/32788963?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Faruk Aydın</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=ofarukaydin" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/dahlmo"><img src="https://avatars.githubusercontent.com/u/23076026?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dahlmo</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=dahlmo" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gandazgul"><img src="https://avatars.githubusercontent.com/u/108850?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Carlos Ravelo</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=gandazgul" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/paulish"><img src="https://avatars.githubusercontent.com/u/1762032?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paul Ishenin</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=paulish" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/sbingner"><img src="https://avatars.githubusercontent.com/u/354533?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam Bingner</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=sbingner" title="Code">💻</a></td>
+    <td align="center"><a href="https://stackoverflow.com/users/5059657/alexander-staroselsky"><img src="https://avatars.githubusercontent.com/u/34102969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexander Staroselsky</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=alexstaroselsky" title="Code">💻</a></td>
+    <td align="center"><a href="http://joelabrahamsson.com"><img src="https://avatars.githubusercontent.com/u/218986?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joel Abrahamsson</b></sub></a><br /><a href="https://github.com/BRIKEV/express-jsdoc-swagger/commits?author=joelabrahamsson" title="Code">💻</a></td>
   </tr>
 </table>
 
